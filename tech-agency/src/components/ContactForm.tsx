@@ -73,6 +73,7 @@ export function ContactForm() {
           <div className="relative">
             <select
               name="focus"
+              defaultValue="AI Voice Automation"
               className="w-full bg-[#0f172a] border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-all appearance-none"
             >
               <option value="AI Voice Automation">AI Voice Automation</option>

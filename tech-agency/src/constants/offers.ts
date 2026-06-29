@@ -142,9 +142,9 @@ export const OFFERS_DATA: Offer[] = [
     sales: 5,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1518433278988-2b2a1a20835f?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1555664424-778a1e5e1b48?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=80"
     ],
     deliverables: [
       "Custom n8n or Make structural pipeline configuration blueprint",
@@ -185,9 +185,9 @@ export const OFFERS_DATA: Offer[] = [
     sales: 3,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1562577353-fba3f743456a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1571721738205-e827cbd7f394?w=800&auto=format&fit=crop&q=80"
     ],
     deliverables: [
       "Comprehensive AI search citation audit mapping profiles",
@@ -228,9 +228,9 @@ export const OFFERS_DATA: Offer[] = [
     sales: 4,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1523475496153-3d6cc0f0bf19?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=800&auto=format&fit=crop&q=80"
     ],
     deliverables: [
       "Shopify Store configuration & multi-sales channel activation",
@@ -272,9 +272,9 @@ export const OFFERS_DATA: Offer[] = [
     sales: 2,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1551288049-bbbda536339a?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1504868584819-f8e90526354c?w=600&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1551288049-bbbda536339a?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1504868584819-f8e90526354c?w=800&auto=format&fit=crop&q=80"
     ],
     deliverables: [
       "Interactive data dashboard built with Chart.js or Tremor layouts",

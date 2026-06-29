@@ -15,15 +15,15 @@ const TECH_ICONS = [
 
 export const TechStackMarquee = () => {
   return (
-    <div className="w-full border-y border-slate-800 py-8 bg-slate-900/50 backdrop-blur-md overflow-hidden relative z-10">
+    <div className="w-full border-y border-slate-200 py-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.03)] overflow-hidden mb-12 relative z-10">
       <div className="flex gap-24 w-max animate-tech-track px-4">
-        {[...TECH_ICONS, ...TECH_ICONS, ...TECH_ICONS].map((icon, idx) => (
+        {[...TECH_ICONS, ...TECH_ICONS].map((icon, idx) => (
           <div key={`${icon.name}-${idx}`} className="relative h-10 w-24">
             <Image
               src={icon.url}
               alt={icon.name}
               fill
-              className="object-contain opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
+              className="object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
               sizes="96px"
             />
           </div>
@@ -36,7 +36,7 @@ export const TechStackMarquee = () => {
         }
         @keyframes techMarquee {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-33.33%); }
+          100% { transform: translateX(-50%); }
         }
       `}</style>
     </div>

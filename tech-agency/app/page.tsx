@@ -22,7 +22,7 @@ export const metadata = generateMetadata({
 
 export default function HomePage() {
   return (
-    <main className="bg-[#030712] relative min-h-screen">
+    <main className="bg-white relative min-h-screen">
       <TechGridBackground />
 
       <SchemaScript
@@ -65,10 +65,10 @@ export default function HomePage() {
           <div className="container mx-auto px-4 relative z-10">
             <ScrollReveal direction="up" className="flex flex-col items-center text-center mb-16">
               <Badge text="Transparency" className="mb-4" />
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                Real-Time <span className="text-primary">Ops Portal</span>
+              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-tech">
+                Real-Time <span className="text-indigo-600">Ops Portal</span>
               </h2>
-              <p className="text-gray-400 max-w-2xl font-light">
+              <p className="text-slate-500 max-w-2xl font-light">
                 Experience our transparent development process. Interact with our live portal prototype to see how we track and manage high-performance deployments.
               </p>
             </ScrollReveal>

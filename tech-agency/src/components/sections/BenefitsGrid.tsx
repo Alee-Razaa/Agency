@@ -118,20 +118,15 @@ const BENEFITS = [
 
 export const BenefitsGrid = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-16">
-        <div className="space-y-16">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold tracking-[0.25em] text-indigo-600 uppercase font-sans block mb-3">Ecosystem Architecture</span>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 font-sans">
-              Precision Engineering for <span className="text-indigo-600 italic font-serif">Modern Enterprise</span>
-            </h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              Our infrastructure is built on specialized automation loops and high-fidelity deployment cycles designed to scale with your operational demands.
-            </p>
+    <section className="py-24 relative overflow-hidden z-10">
+      <div className="max-w-6xl mx-auto px-6 lg:px-16">
+        <div className="space-y-12">
+          <div className="space-y-2 bg-white/70 p-4 rounded-xl backdrop-blur-sm inline-block">
+            <span className="text-xs font-bold tracking-[0.25em] text-indigo-600 uppercase font-tech block">Ecosystem Architecture</span>
+            <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 font-tech">Why Work With Us</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {BENEFITS.map((benefit, index) => (
               <motion.div
                 key={benefit.id}
@@ -139,23 +134,19 @@ export const BenefitsGrid = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className={`group relative bg-white p-8 rounded-3xl border border-slate-100 shadow-sm transition-all duration-500 ${benefit.hoverBorder} ${benefit.hoverShadow} hover:-translate-y-1`}
+                className={`group relative bg-white/95 p-8 rounded-2xl border border-slate-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] flex items-start gap-5 backdrop-blur-sm transition-all duration-300 ${benefit.hoverBorder} ${benefit.hoverShadow} hover:-translate-y-1`}
               >
-                <div className={`w-12 h-12 rounded-2xl ${benefit.bg} flex items-center justify-center mb-6 transition-all duration-500 group-hover:scale-110`}>
-                  <span className={`font-bold font-sans ${benefit.text}`}>{benefit.id}</span>
+                <div className={`w-10 h-10 rounded-full border-2 border-dotted ${benefit.text.replace('text', 'border')} flex items-center justify-center flex-shrink-0 ${benefit.bg} ${benefit.text} font-tech font-bold text-xs transition-colors duration-300 ${benefit.groupHoverBg} group-hover:text-white`}>
+                  {benefit.id}
                 </div>
-
-                <div className="space-y-3">
-                  <h3 className="text-lg font-bold tracking-tight text-slate-900 font-sans group-hover:text-indigo-600 transition-colors">
+                <div className="space-y-1.5 relative z-10">
+                  <h3 className={`text-base font-bold tracking-tight ${benefit.text} font-tech`}>
                     {benefit.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed font-normal">
+                  <p className="text-xs text-slate-500 leading-relaxed font-light">
                     {benefit.description}
                   </p>
                 </div>
-
-                {/* Decorative element */}
-                <div className={`absolute top-4 right-4 w-2 h-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity ${benefit.groupHoverBg}`} />
               </motion.div>
             ))}
           </div>

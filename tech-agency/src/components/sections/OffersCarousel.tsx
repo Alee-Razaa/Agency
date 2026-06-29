@@ -49,6 +49,7 @@ const CardGallery = ({ images }: { images: string[] }) => {
             alt="Offer Preview"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
       ))}
@@ -125,15 +126,19 @@ export function OffersCarousel() {
     return () => clearInterval(interval);
   }, [currentIndex]);
 
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
+  const [mounted, setMounted] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
+    setMounted(true);
+    setWindowWidth(window.innerWidth);
     const handleResize = () => setWindowWidth(window.innerWidth);
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const getVisibleCount = () => {
+    if (!mounted) return 3; // Default for SSR
     if (windowWidth < 768) return 1;
     if (windowWidth < 1024) return 2;
     return 3;
