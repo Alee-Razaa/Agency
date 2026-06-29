@@ -1,5 +1,6 @@
 import { generateMetadata } from '@/src/lib/metadata';
-import { Mail, MessageSquare, Phone, MapPin, Send, Zap } from 'lucide-react';
+import { Mail, MessageSquare, Zap } from 'lucide-react';
+import { ContactForm } from '@/src/components/ContactForm';
 
 export const metadata = generateMetadata({
   title: 'Contact | Tech Agency Strategy Session',
@@ -9,8 +10,8 @@ export const metadata = generateMetadata({
 
 export default function ContactPage() {
   return (
-    <main className="bg-[#030712] min-h-screen pt-32 pb-20">
-      <div className="max-w-7xl mx-auto px-6 lg:px-16">
+    <main className="bg-[#030712] min-h-screen pt-32 pb-20 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-16 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
 
           {/* Left: Info */}
@@ -55,43 +56,11 @@ export default function ContactPage() {
           </div>
 
           {/* Right: Form */}
-          <div className="bg-slate-900/40 backdrop-blur-xl border border-white/5 rounded-[40px] p-8 md:p-12 shadow-2xl">
-             <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                        <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Entity Name</label>
-                        <input type="text" placeholder="John Doe" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-all" />
-                    </div>
-                    <div className="space-y-2">
-                        <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Communication Node</label>
-                        <input type="email" placeholder="john@company.com" className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-all" />
-                    </div>
-                </div>
-
-                <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Infrastructure Focus</label>
-                    <select className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-all appearance-none">
-                        <option>AI Voice Automation</option>
-                        <option>Full Stack Web Ecosystem</option>
-                        <option>Search Dominance (SEO/AEO)</option>
-                        <option>Custom Enterprise Pipeline</option>
-                    </select>
-                </div>
-
-                <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-slate-500 uppercase tracking-widest ml-1">Objective Summary</label>
-                    <textarea rows={4} placeholder="Describe the technical requirements and scale..." className="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 text-white focus:outline-none focus:border-blue-500/50 transition-all resize-none"></textarea>
-                </div>
-
-                <button className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-5 rounded-2xl transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center gap-3 group">
-                    Transmit Request
-                    <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-                </button>
-             </form>
-          </div>
+          <ContactForm />
 
         </div>
       </div>
     </main>
   );
 }
+

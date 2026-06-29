@@ -15,20 +15,16 @@
   --color-error: #ef4444;
 
   /* NEUTRAL PALETTE */
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #64748b;
-  --color-text-muted: #94a3b8;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
 
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f8fafc;
-  --color-bg-tertiary: #f1f5f9;
+  --color-bg-primary: #030712;
+  --color-bg-secondary: #0f172a;
+  --color-bg-tertiary: #1e293b;
 
-  --color-border: #e2e8f0;
-  --color-border-dark: #cbd5e1;
-
-  /* DARK MODE OVERRIDES */
-  --color-dark-bg-primary: #0f172a;
-  --color-dark-text-primary: #f8fafc;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(59, 130, 246, 0.5);
 
   /* SPACING SCALE */
   --spacing-xs: 0.25rem;
@@ -106,7 +102,7 @@
   }
 
   a {
-    @apply text-primary hover:text-primary-hover underline transition-colors duration-200;
+    @apply text-primary hover:text-primary-hover no-underline transition-colors duration-200;
   }
 
   code {
@@ -132,21 +128,16 @@
 
 @layer components {
   /* BUTTON COMPONENTS */
-  .btn {
-    @apply inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer rounded-lg;
-    @apply disabled:opacity-50 disabled:cursor-not-allowed;
-  }
-
   .btn-primary {
-    @apply btn bg-primary text-white hover:bg-primary-hover active:scale-95 shadow-md hover:shadow-lg;
+    @apply inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer rounded-lg bg-primary text-white hover:bg-primary-hover active:scale-95 shadow-md hover:shadow-lg;
   }
 
   .btn-secondary {
-    @apply btn bg-bg-secondary text-text-primary border-2 border-text-secondary hover:bg-bg-tertiary;
+    @apply inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer rounded-lg bg-bg-secondary text-text-primary border-2 border-text-secondary hover:bg-bg-tertiary;
   }
 
   .btn-ghost {
-    @apply btn text-primary hover:bg-primary-light;
+    @apply inline-flex items-center justify-center font-semibold transition-all duration-200 cursor-pointer rounded-lg text-primary hover:bg-primary-light;
   }
 
   .btn-xs {
@@ -209,11 +200,11 @@
   }
 
   .section {
-    @apply section-container section-padding;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24;
   }
 
   .hero-container {
-    @apply section flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12;
   }
 
   /* BADGES & TAGS */
@@ -222,15 +213,15 @@
   }
 
   .badge-primary {
-    @apply badge bg-primary-light text-primary;
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-primary-light text-primary;
   }
 
   .badge-secondary {
-    @apply badge bg-secondary/10 text-secondary;
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-secondary/10 text-secondary;
   }
 
   .badge-success {
-    @apply badge bg-success/10 text-success;
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-sm font-medium bg-success/10 text-success;
   }
 }
 

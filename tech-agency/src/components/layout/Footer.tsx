@@ -1,79 +1,92 @@
-import Link from "next/link";
-import { Zap, Github, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
+'use client';
 
-export function Footer() {
+import React from 'react';
+
+export const Footer = () => {
   return (
-    <footer className="bg-slate-950 border-t border-white/5 pt-20 pb-10 px-6 lg:px-16 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+    <footer id="footer-contact" className="w-full bg-white border-t border-slate-100 pt-24 pb-12 px-6 lg:px-16 relative z-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
 
-          <div className="lg:col-span-1 space-y-6">
-            <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center group-hover:rotate-[10deg] transition-transform duration-500">
-                <Zap className="w-5 h-5 text-white fill-white" />
-              </div>
-              <span className="text-lg font-bold text-white tracking-tighter">
-                TECH<span className="text-blue-500">AGENCY</span>
-              </span>
-            </Link>
-            <p className="text-slate-500 text-sm leading-relaxed max-w-xs">
-              Architecting the next generation of AI-driven business infrastructure and automated intelligence loops.
+        {/* LEFT HALF: BRAND & IDENTITY (SPAN 5) */}
+        <div className="lg:col-span-5 space-y-8">
+          <div className="space-y-6">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center font-bold text-white">a</div>
+              <span className="text-xl font-bold tracking-tight text-slate-900 font-sans uppercase">Adapta<span className="text-indigo-600">Labs</span></span>
+            </div>
+            <p className="text-sm text-slate-500 leading-relaxed font-normal max-w-sm">
+              Deploying production-ready AI frameworks, server architectures, and clean workflow business systems. We bridge the gap between complex engineering and seamless business operations.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 transition-all">
-                <Github className="w-4 h-4" />
-              </a>
+              {['GitHub', 'LinkedIn', 'X (Twitter)', 'Instagram'].map((social) => (
+                <a key={social} href={`#${social.toLowerCase()}`} className="text-xs font-bold text-slate-400 hover:text-indigo-600 transition-colors uppercase tracking-wider">
+                  {social}
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="space-y-6">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">Ecosystem</h4>
-            <ul className="space-y-4">
-              <li><Link href="/services" className="text-sm text-slate-500 hover:text-blue-400 transition-colors">AI Voice Agents</Link></li>
-              <li><Link href="/services" className="text-sm text-slate-500 hover:text-blue-400 transition-colors">Full Stack MVPs</Link></li>
-              <li><Link href="/services" className="text-sm text-slate-500 hover:text-blue-400 transition-colors">Content Automation</Link></li>
-              <li><Link href="/services" className="text-sm text-slate-500 hover:text-blue-400 transition-colors">Technical SEO</Link></li>
-            </ul>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">Resources</h4>
-            <ul className="space-y-4">
-              <li><Link href="/case-studies" className="text-sm text-slate-500 hover:text-blue-400 transition-colors">Case Studies</Link></li>
-              <li><a href="#" className="text-sm text-slate-500 hover:text-blue-400 transition-colors flex items-center gap-1">Documentation <ArrowUpRight className="w-3 h-3" /></a></li>
-              <li><a href="#" className="text-sm text-slate-500 hover:text-blue-400 transition-colors flex items-center gap-1">API Status <ArrowUpRight className="w-3 h-3" /></a></li>
-            </ul>
-          </div>
-
-          <div className="space-y-6">
-            <h4 className="text-xs font-bold uppercase tracking-widest text-white">Newsletter</h4>
-            <p className="text-sm text-slate-500">Get the latest technical architectural insights.</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="Terminal input..." className="bg-white/5 border border-white/10 rounded-xl px-4 py-2 text-xs text-white focus:outline-none focus:border-blue-500/50 w-full" />
-              <button className="bg-blue-600 text-white p-2 rounded-xl">
-                <ArrowUpRight className="w-4 h-4" />
-              </button>
+          <div className="p-6 bg-slate-50 rounded-3xl border border-slate-100 inline-block">
+            <p className="text-xs font-bold text-indigo-600 uppercase tracking-widest mb-2">Availability Status</p>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="text-sm font-semibold text-slate-700">Accepting Q1 2026 Projects</span>
             </div>
           </div>
-
         </div>
 
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-slate-600 font-bold uppercase tracking-widest">
-            © 2026 Tech Agency Matrix. All Rights Reserved.
-          </p>
-          <div className="flex gap-8">
-            <a href="#" className="text-[10px] text-slate-600 hover:text-white font-bold uppercase tracking-widest transition-colors">Terms of Protocol</a>
-            <a href="#" className="text-[10px] text-slate-600 hover:text-white font-bold uppercase tracking-widest transition-colors">Privacy Encryption</a>
+        {/* RIGHT HALF: NAVIGATION LINKS (SPAN 7) */}
+        <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-12">
+          {/* Group 1: Services */}
+          <div className="space-y-6">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-900 font-sans">Solutions</h4>
+            <ul className="space-y-4 text-sm text-slate-500 font-medium">
+              <li><a href="#voice-agents" className="hover:text-indigo-600 transition-colors">AI Voice Agents</a></li>
+              <li><a href="#full-stack" className="hover:text-indigo-600 transition-colors">Full-Stack Apps</a></li>
+              <li><a href="#workflows" className="hover:text-indigo-600 transition-colors">n8n Automations</a></li>
+              <li><a href="#vision" className="hover:text-indigo-600 transition-colors">Computer Vision</a></li>
+              <li><a href="#commerce" className="hover:text-indigo-600 transition-colors">E-Commerce</a></li>
+            </ul>
           </div>
+
+          {/* Group 2: Company */}
+          <div className="space-y-6">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-900 font-sans">Company</h4>
+            <ul className="space-y-4 text-sm text-slate-500 font-medium">
+              <li><a href="#about" className="hover:text-indigo-600 transition-colors">About Us</a></li>
+              <li><a href="#engineers" className="hover:text-indigo-600 transition-colors">Our Engineers</a></li>
+              <li><a href="#case-studies" className="hover:text-indigo-600 transition-colors">Case Portfolios</a></li>
+              <li><a href="#pricing" className="hover:text-indigo-600 transition-colors">Pricing Models</a></li>
+              <li><a href="#careers" className="hover:text-indigo-600 transition-colors">Careers</a></li>
+            </ul>
+          </div>
+
+          {/* Group 3: Contact */}
+          <div className="space-y-6">
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-slate-900 font-sans">Contact</h4>
+            <div className="space-y-4 text-sm text-slate-500 font-medium">
+              <p className="leading-relaxed">
+                Sukkur IBA University,<br />Sukkur, Sindh, Pakistan
+              </p>
+              <a href="mailto:ops@oxfordsports.online" className="text-indigo-600 hover:underline block">ops@oxfordsports.online</a>
+              <div className="pt-2">
+                <span className="text-[10px] bg-indigo-50 text-indigo-700 px-2 py-1 rounded font-bold uppercase">Escrow Secured</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {/* SUB-FOOTER */}
+      <div className="max-w-7xl mx-auto border-t border-slate-100 mt-20 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-semibold text-slate-400 uppercase tracking-widest">
+        <p>&copy; 2026 Adapta Labs. All Rights Reserved.</p>
+        <div className="flex gap-8">
+          <a href="#privacy" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
+          <a href="#terms" className="hover:text-slate-900 transition-colors">Terms of Service</a>
+          <a href="#sla" className="hover:text-slate-900 transition-colors">SLA</a>
         </div>
       </div>
     </footer>
   );
-}
+};

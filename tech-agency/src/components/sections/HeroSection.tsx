@@ -2,283 +2,207 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import { Button } from "../Button";
-import { Badge } from "../Badge";
-import { Check, Star, Shield, Briefcase, Bot, ShoppingCart, Search, Video } from "lucide-react";
+import { Check, Shield, ChevronRight } from "lucide-react";
 
 /**
  * TYPE DEFINITIONS
  */
-interface ProjectStep {
+interface Stage {
   id: number;
-  label: string;
+  title: string;
+  icon: string;
 }
 
-interface ServiceNode {
+interface Person {
   id: number;
   name: string;
   image: string;
-  steps: ProjectStep[];
 }
 
-const SERVICES: ServiceNode[] = [
+const PEOPLE: Person[] = [
   {
     id: 0,
-    name: "Business Presence",
+    name: "Client Alpha",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&fit=crop&q=80",
-    steps: [
-      { id: 0, label: "UI/UX Architecture" },
-      { id: 1, label: "Next.js Development" },
-      { id: 2, label: "Production Deployment" },
-    ],
   },
   {
     id: 1,
-    name: "Agent Development",
+    name: "Client Beta",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&fit=crop&q=80",
-    steps: [
-      { id: 0, label: "Logic Mapping" },
-      { id: 1, label: "LLM Integration" },
-      { id: 2, label: "API Webhook Sync" },
-    ],
   },
   {
     id: 2,
-    name: "E-commerce Growth",
+    name: "Client Gamma",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&fit=crop&q=80",
-    steps: [
-      { id: 0, label: "Store Optimization" },
-      { id: 1, label: "Conversion Funnels" },
-      { id: 2, label: "Inventory Automation" },
-    ],
   },
   {
     id: 3,
-    name: "AEO/SEO Engine",
+    name: "Client Delta",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&fit=crop&q=80",
-    steps: [
-      { id: 0, label: "Semantic Analysis" },
-      { id: 1, label: "Authority Building" },
-      { id: 2, label: "Search Dominance" },
-    ],
-  },
-  {
-    id: 4,
-    name: "Content Automation",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&fit=crop&q=80",
-    steps: [
-      { id: 0, label: "Creative Strategy" },
-      { id: 1, label: "Batch Processing" },
-      { id: 2, label: "Multi-Channel Push" },
-    ],
   },
 ];
 
-const STEP_DURATION = 2000;
+const STAGES: Stage[] = [
+  { id: 1, title: 'Analysis', icon: '📩' },
+  { id: 2, title: 'Agent Implementation', icon: '⚙️' },
+  { id: 3, title: 'Building Agent', icon: '🗓️' },
+  { id: 4, title: 'Deployment', icon: '📊' }
+];
+
+const STEP_DURATION = 2600;
 
 export function HeroSection() {
+  const [currentActiveStage, setCurrentActiveStage] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
-  const [activeStep, setActiveStep] = useState(0);
-  const [completedRegistry, setCompletedRegistry] = useState<number[]>([]);
+  const [completedPeople, setCompletedPeople] = useState<number[]>([]);
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) {
-          if (activeStep < 2) {
-            setActiveStep((s) => s + 1);
+          if (currentActiveStage < STAGES.length - 1) {
+            setCurrentActiveStage((s) => s + 1);
             return 0;
           } else {
-            // Project completed
-            setCompletedRegistry((prevRegistry) => {
-              if (!prevRegistry.includes(activeIndex)) {
-                return [...prevRegistry, activeIndex];
+            // All stages complete for this person
+            setCompletedPeople((prevList) => {
+              if (!prevList.includes(activeIndex)) {
+                return [...prevList, activeIndex];
               }
-              return prevRegistry;
+              return prevList;
             });
 
-            // Move to next client/service
-            setActiveIndex((idx) => (idx + 1) % SERVICES.length);
-            setActiveStep(0);
+            // Move to next person
+            setActiveIndex((idx) => (idx + 1) % PEOPLE.length);
+            setCurrentActiveStage(0);
             return 0;
           }
         }
-        return prev + 2; // Adjust for smoothness/speed
-      }, STEP_DURATION / 50);
-
-      return () => clearInterval(interval);
-    }, 40);
+        return prev + 2; // Controls speed (100 / (2600ms / 50ms interval) approx 2)
+      });
+    }, 50);
 
     return () => clearInterval(interval);
-  }, [activeIndex, activeStep]);
-
-  const currentService = SERVICES[activeIndex];
+  }, [currentActiveStage, activeIndex]);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#030712] py-20 px-6 lg:px-16">
-      {/* Background Decor */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[120px]" />
-      </div>
+    <main className="relative min-h-[calc(100vh-88px)] flex items-center justify-center overflow-hidden px-6 lg:px-16 py-12"
+      style={{
+        background: "radial-gradient(circle at 75% 40%, #1e40af 0%, #0d1e45 40%, #040814 80%)"
+      }}
+    >
+      {/* Smooth glowing background behind the orbit canvas */}
+      <div className="absolute w-[500px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
+           style={{ background: "radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, rgba(0,0,0,0) 70%)" }} />
 
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10">
+      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
 
-        {/* Left Content */}
-        <div className="lg:col-span-5 space-y-10 animate-fadeInUp">
+        {/* Left Column: Agency Hook / Copy */}
+        <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-12 lg:space-y-24">
           <div className="space-y-6">
-            <Badge variant="secondary" className="px-4 py-1 tracking-widest uppercase font-bold text-xs bg-blue-500/10 text-blue-400 border-none">
-              Adapta Core System
-            </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white leading-[1.05]">
-              AI-Powered <br /> acquisition. <br />
-              <span className="italic font-normal text-blue-200">smarter system.</span>
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-blue-400 block">ADAPTA CORE SYSTEM</span>
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] text-white">
+              AI-Powered <br /> acquisition. <br /> smarter <span className="font-serif italic font-normal text-blue-200">system.</span>
             </h1>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <Button className="rounded-full bg-slate-900 border border-slate-800 hover:border-slate-700 px-8 py-6 group flex items-center gap-4 h-auto">
-              <span className="text-base font-semibold text-white">Request a Demo</span>
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-black group-hover:translate-x-1 transition-transform">
-                <Check className="w-4 h-4" strokeWidth={3} />
+          {/* Lower Left CTA Placement */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-6">
+            <a href="#" className="bg-slate-900 border border-slate-800 text-white pl-6 pr-2 py-2 rounded-full flex items-center gap-4 hover:border-slate-700 transition shadow-2xl group">
+              <span className="text-sm font-medium">Request a Demo</span>
+              <div className="w-8 h-8 bg-white text-black rounded-full flex items-center justify-center group-hover:translate-x-1 transition-transform">
+                <ChevronRight className="w-4 h-4" />
               </div>
-            </Button>
-          </div>
-
-          <div className="max-w-sm">
-            <p className="text-sm text-slate-400 leading-relaxed font-medium">
-              Automate your entire recruitment workflow with intelligent AI. Reduce time-to-hire by 80% while elevating the candidate <span className="italic text-blue-300">experience.</span>
-            </p>
+            </a>
           </div>
         </div>
 
-        {/* Right Content: Kinetic Orbit System */}
-        <div className="lg:col-span-7 flex justify-center items-center relative h-[500px] md:h-[600px] w-full">
-          {/* Deep Backlight */}
-          <div className="absolute w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-[100px] pointer-events-none" />
+        {/* Right Column: Interactive Kinetic Orbit System */}
+        <div className="lg:col-span-7 flex justify-center items-center relative h-[550px] w-full">
 
-          <div className="relative w-full h-full flex items-center justify-center animate-float">
+          <div className="relative w-full h-full flex items-center justify-center animate-floating">
 
-            {/* Dotted Orbit Ring */}
-            <div className="absolute w-[360px] h-[360px] md:w-[440px] md:h-[440px] border-2 border-dashed border-blue-500/20 rounded-full animate-orbit">
-              {SERVICES.map((service, index) => {
-                const angle = (index * 72) * (Math.PI / 180);
-                const x = Math.cos(angle) * (typeof window !== 'undefined' && window.innerWidth < 768 ? 180 : 220);
-                const y = Math.sin(angle) * (typeof window !== 'undefined' && window.innerWidth < 768 ? 180 : 220);
+            {/* Dotted Orbital Circle Ring */}
+            <div className="absolute w-[360px] h-[360px] md:w-[440px] md:h-[440px] border-2 border-dashed border-blue-500/30 rounded-full animate-orbit">
+                {PEOPLE.map((person, index) => {
+                const angle = (index * 90) * (Math.PI / 180);
+                // Responsive radius
+                const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+                const radius = isMobile ? 160 : 220;
+                const x = Math.cos(angle) * radius;
+                const y = Math.sin(angle) * radius;
 
-                const isCompleted = completedRegistry.includes(index);
+                const isCompleted = completedPeople.includes(index);
                 const isActive = activeIndex === index;
 
                 return (
                   <div
-                    key={service.id}
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-700"
-                    style={{
-                      transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))`,
-                    }}
+                    key={person.id}
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                    style={{ transform: `translate(calc(-50% + ${x}px), calc(-50% + ${y}px))` }}
                   >
-                    <div className={`
-                      relative w-14 h-14 rounded-full p-0.5 transition-all duration-500 animate-counter-orbit
-                      ${isActive ? 'scale-110' : 'scale-100'}
-                      ${isCompleted ? 'border-2 border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.4)]' : 'bg-slate-900 border border-blue-500/30'}
+                    <div className={`w-12 h-12 rounded-full bg-slate-900 border p-0.5 animate-counter-orbit transition-all duration-500
+                      ${isCompleted ? 'border-green-500 shadow-[0_0_15px_rgba(34,197,94,0.5)]' : isActive ? 'border-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.5)]' : 'border-blue-400/30'}
                     `}>
-                      <Image
-                        src={service.image}
-                        alt={service.name}
-                        width={56}
-                        height={56}
-                        className="w-full h-full rounded-full object-cover"
-                      />
-                      {isCompleted && (
-                        <div className="absolute -top-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full flex items-center justify-center border-2 border-[#030712]">
-                          <Check className="w-3 h-3 text-white" strokeWidth={4} />
-                        </div>
-                      )}
+                      <div className="relative w-full h-full rounded-full overflow-hidden">
+                        <Image
+                          src={person.image}
+                          alt={person.name}
+                          width={48}
+                          height={48}
+                          className={`w-full h-full object-cover transition-all duration-500 ${isActive || isCompleted ? 'grayscale-0' : 'grayscale'}`}
+                        />
+                        {isCompleted && (
+                          <div className="absolute inset-0 bg-green-500/20 flex items-center justify-center">
+                            <Check className="w-6 h-6 text-green-500" strokeWidth={4} />
+                          </div>
+                        )}
+                      </div>
                     </div>
                   </div>
                 );
               })}
             </div>
 
-            {/* Central Glassmorphic Card */}
-            <div className="absolute w-[320px] md:w-[340px] bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2rem] p-8 shadow-2xl z-10">
+            {/* Core Central Card Surface (Glassmorphic) */}
+            <div className="absolute w-[290px] md:w-[340px] bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6 shadow-2xl z-10 transition-all duration-500">
               {/* Card Header */}
-              <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/40">
-                  <Shield className="w-6 h-6 text-white" />
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/30">
+                  <Shield className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="flex items-center gap-2 mb-0.5">
-                    <h3 className="text-base font-bold text-white leading-none">Fulfillment Engine</h3>
-                    <div className="bg-amber-500/10 px-2 py-0.5 rounded-full flex items-center gap-1">
-                      <Star className="w-3 h-3 text-amber-400 fill-amber-400" />
-                      <span className="text-[10px] font-bold text-amber-400">CORE</span>
-                    </div>
-                  </div>
-                  <p className="text-[10px] text-slate-400 font-bold tracking-[0.15em] uppercase">Live Automation Loop</p>
+                  <h3 className="text-sm font-semibold text-white">Recruitment Process</h3>
+                  <p className="text-[10px] text-slate-400 tracking-wider uppercase">Live Automation Loop</p>
                 </div>
               </div>
 
-              {/* Execution Steps */}
-              <div className="space-y-4 mb-8 min-h-[180px]">
-                {currentService.steps.map((step, idx) => {
-                  const isPast = idx < activeStep;
-                  const isCurrent = idx === activeStep;
+              {/* Sequential Interactive Rows Container */}
+              <div className="space-y-3">
+                {STAGES.map((stage, i) => {
+                  if (i > currentActiveStage) return null;
 
+                  const isLast = i === currentActiveStage;
                   return (
-                    <div
-                      key={step.id}
-                      className={`
-                        p-4 rounded-2xl transition-all duration-500 border
-                        ${isCurrent ? 'bg-white/10 border-white/10 scale-[1.02]' : 'bg-transparent border-transparent opacity-40'}
-                      `}
-                    >
-                      <div className="flex items-center justify-between gap-3">
+                    <div key={stage.id} className={`flex flex-col gap-2 p-3 rounded-xl transition-all duration-500 transform ${isLast ? 'bg-white/10 scale-105 border border-white/10' : 'bg-transparent opacity-40 scale-100'}`}>
+                      <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className={`
-                            w-6 h-6 rounded-lg flex items-center justify-center text-xs font-bold
-                            ${isCurrent ? 'bg-blue-500 text-white' : isPast ? 'bg-emerald-500 text-white' : 'bg-slate-800 text-slate-500'}
-                          `}>
-                            {isPast ? <Check className="w-3.5 h-3.5" strokeWidth={3} /> : idx + 1}
-                          </div>
-                          <span className="text-sm font-semibold text-white">{step.label}</span>
+                          <span className="text-base">{stage.icon}</span>
+                          <span className="text-xs font-medium text-white">{stage.title}</span>
                         </div>
-                        {isCurrent && (
-                           <div className="flex gap-0.5">
-                              {[1, 2, 3].map(i => (
-                                <div key={i} className="w-1 h-1 bg-blue-400 rounded-full animate-pulse" style={{ animationDelay: `${i * 200}ms` }} />
-                              ))}
-                           </div>
-                        )}
+                        <div className={`w-4 h-4 rounded-full flex items-center justify-center text-[9px] ${isLast ? 'bg-blue-400 animate-pulse' : 'bg-green-500'}`}>
+                          {isLast ? '' : <Check className="w-2.5 h-2.5 text-white" strokeWidth={4} />}
+                        </div>
                       </div>
-
-                      {isCurrent && (
-                        <div className="mt-3 w-full h-1 bg-white/10 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-blue-500 transition-all duration-100 ease-linear"
-                            style={{ width: `${progress}%` }}
-                          />
+                      {isLast && (
+                        <div className="w-full bg-white/20 h-1 rounded-full overflow-hidden mt-1">
+                          <div className="bg-blue-400 h-full rounded-full transition-all duration-100 ease-linear" style={{ width: `${progress}%` }}></div>
                         </div>
                       )}
                     </div>
                   );
                 })}
-              </div>
-
-              {/* Footer Metrics */}
-              <div className="pt-6 border-t border-white/5 flex items-center justify-between">
-                <div>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-1">Efficiency Rate</p>
-                  <p className="text-xl font-bold text-white tracking-tight">99.8%</p>
-                </div>
-                <div className="flex flex-col items-end">
-                   <div className="flex gap-0.5 mb-1">
-                    {[1, 2, 3, 4].map(i => (
-                      <Star key={i} className="w-3 h-3 text-amber-400 fill-amber-400" />
-                    ))}
-                   </div>
-                   <p className="text-[9px] font-bold text-slate-500 uppercase tracking-tighter">Enterprise Grade</p>
-                </div>
               </div>
             </div>
 
@@ -287,36 +211,37 @@ export function HeroSection() {
 
       </div>
 
+      {/* Lower Right Explainer Text Placement */}
+      <div className="absolute bottom-6 right-6 lg:right-16 max-w-xs text-right hidden sm:block z-20">
+        <p className="text-xs text-slate-400 font-medium leading-relaxed">
+          Automate your entire recruitment workflow with intelligent AI. Reduce time-to-hire by 80% while elevating the candidate <span className="font-serif italic font-normal text-blue-300">experience.</span>
+        </p>
+      </div>
+
       <style jsx>{`
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-floating {
+            animation: floating 6s ease-in-out infinite;
+        }
         @keyframes orbit {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-        }
-        @keyframes counter-orbit {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(-360deg); }
-        }
-        @keyframes float {
-          0%, 100% { transform: translateY(0); }
-          50% { transform: translateY(-20px); }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
         .animate-orbit {
-          animation: orbit 40s linear infinite;
+            animation: orbit 40s linear infinite;
+        }
+        @keyframes counter-orbit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
         }
         .animate-counter-orbit {
-          animation: counter-orbit 40s linear infinite;
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .animate-fadeInUp {
-          animation: fadeInUp 0.8s ease-out forwards;
-        }
-        @keyframes fadeInUp {
-          from { opacity: 0; transform: translateY(30px); }
-          to { opacity: 1; transform: translateY(0); }
+            animation: counter-orbit 40s linear infinite;
         }
       `}</style>
-    </section>
+    </main>
   );
 }

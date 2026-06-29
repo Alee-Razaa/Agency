@@ -5,6 +5,7 @@ import { OFFERS_DATA } from "@/src/constants/offers";
 import { generateMetadata as baseGenerateMetadata } from "@/src/lib/metadata";
 import { schemas, SchemaScript } from "@/src/lib/schema";
 import { Metadata } from 'next';
+import { ScrollReveal } from "@/src/components/ScrollReveal";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -59,7 +60,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
 
           {/* Left Column: Content */}
           <div className="lg:col-span-7 space-y-12">
-            <div>
+            <ScrollReveal>
               <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-400 px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-8">
                 <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
                 Service Deep-Dive
@@ -70,87 +71,97 @@ export default async function ServiceDetailPage({ params }: PageProps) {
               <p className="text-xl text-slate-400 leading-relaxed font-medium italic">
                 &ldquo;{offer.tagline}&rdquo;
               </p>
-            </div>
+            </ScrollReveal>
 
-            <div className="aspect-video relative rounded-3xl overflow-hidden border border-white/10 group">
-              <Image
-                src={offer.images[0]}
-                alt={offer.title}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-            </div>
-
-            <section className="space-y-6">
-              <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                <span className="w-8 h-px bg-blue-500" />
-                Strategic Overview
-              </h2>
-              <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
-                <p className="text-slate-300 leading-relaxed text-lg">
-                  {offer.longDesc}
-                </p>
+            <ScrollReveal delay={0.2}>
+              <div className="aspect-video relative rounded-3xl overflow-hidden border border-white/10 group">
+                <Image
+                  src={offer.images[0]}
+                  alt={offer.title}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
               </div>
-            </section>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <section className="space-y-6">
+                <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <span className="w-8 h-px bg-blue-500" />
+                  Strategic Overview
+                </h2>
+                <div className="bg-white/5 border border-white/10 p-8 rounded-3xl">
+                  <p className="text-slate-300 leading-relaxed text-lg mb-0">
+                    {offer.longDesc}
+                  </p>
+                </div>
+              </section>
+            </ScrollReveal>
 
             <div className="grid md:grid-cols-2 gap-12">
-              <section className="space-y-6">
-                <h3 className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-400 rounded-full" />
-                  Included Deliverables
-                </h3>
-                <ul className="space-y-4">
-                  {offer.deliverables.map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
-                        <Check className="w-3.5 h-3.5 text-emerald-400" strokeWidth={3} />
-                      </div>
-                      <span className="text-slate-300 font-medium text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+              <ScrollReveal direction="left" delay={0.4}>
+                <section className="space-y-6">
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-emerald-400 flex items-center gap-2">
+                    <div className="w-2 h-2 bg-emerald-400 rounded-full" />
+                    Included Deliverables
+                  </h3>
+                  <ul className="space-y-4 ml-0">
+                    {offer.deliverables.map((item, i) => (
+                      <li key={i} className="flex items-start gap-4 mb-0">
+                        <div className="mt-1 w-6 h-6 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0 border border-emerald-500/20">
+                          <Check className="w-3.5 h-3.5 text-emerald-400" strokeWidth={3} />
+                        </div>
+                        <span className="text-slate-300 font-medium text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </ScrollReveal>
 
-              <section className="space-y-6 opacity-60">
-                <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-slate-400 rounded-full" />
-                  Extended Capabilities
-                </h3>
-                <ul className="space-y-4">
-                  {offer.exclusions.map((item, i) => (
-                    <li key={i} className="flex items-start gap-4">
-                      <div className="mt-1 w-6 h-6 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
-                        <X className="w-3.5 h-3.5 text-slate-500" strokeWidth={3} />
-                      </div>
-                      <span className="text-slate-500 font-medium text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+              <ScrollReveal direction="right" delay={0.4}>
+                <section className="space-y-6 opacity-60">
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-slate-400 flex items-center gap-2">
+                    <div className="w-2 h-2 bg-slate-400 rounded-full" />
+                    Extended Capabilities
+                  </h3>
+                  <ul className="space-y-4 ml-0">
+                    {offer.exclusions.map((item, i) => (
+                      <li key={i} className="flex items-start gap-4 mb-0">
+                        <div className="mt-1 w-6 h-6 rounded-full bg-white/5 flex items-center justify-center shrink-0 border border-white/10">
+                          <X className="w-3.5 h-3.5 text-slate-500" strokeWidth={3} />
+                        </div>
+                        <span className="text-slate-500 font-medium text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </ScrollReveal>
             </div>
 
-            <section className="space-y-8">
-               <h3 className="text-xs font-bold uppercase tracking-widest text-blue-400 flex items-center gap-2">
-                  <Zap className="w-5 h-5" />
-                  Implementation Roadmap
-                </h3>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {offer.workflow.map((step, idx) => (
-                    <div key={idx} className="bg-slate-900/50 border border-white/10 p-6 rounded-2xl flex gap-5 items-start hover:bg-slate-900 transition-colors">
-                      <span className="text-sm font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-xl border border-blue-500/20 shrink-0">
-                        Step 0{idx+1}
-                      </span>
-                      <span className="text-slate-300 font-semibold leading-relaxed text-sm">{step}</span>
-                    </div>
-                  ))}
-                </div>
-            </section>
+            <ScrollReveal delay={0.5}>
+              <section className="space-y-8">
+                 <h3 className="text-xs font-bold uppercase tracking-widest text-blue-400 flex items-center gap-2">
+                    <Zap className="w-5 h-5" />
+                    Implementation Roadmap
+                  </h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {offer.workflow.map((step, idx) => (
+                      <div key={idx} className="bg-slate-900/50 border border-white/10 p-6 rounded-2xl flex gap-5 items-start hover:bg-slate-900 transition-colors">
+                        <span className="text-sm font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-xl border border-blue-500/20 shrink-0">
+                          Step 0{idx+1}
+                        </span>
+                        <span className="text-slate-300 font-semibold leading-relaxed text-sm">{step}</span>
+                      </div>
+                    ))}
+                  </div>
+              </section>
+            </ScrollReveal>
           </div>
 
           {/* Right Column: Sticky Pricing & Stats */}
           <div className="lg:col-span-5">
-            <div className="sticky top-32 space-y-8">
+            <ScrollReveal direction="right" className="sticky top-32 space-y-8">
               {/* Order Card */}
               <div className="bg-slate-900/80 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 md:p-10 shadow-2xl relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl -mr-16 -mt-16" />
@@ -224,7 +235,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
                   <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mt-1">Deployments</div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           </div>
 
         </div>
@@ -232,3 +243,4 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     </main>
   );
 }
+

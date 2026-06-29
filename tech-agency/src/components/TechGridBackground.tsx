@@ -1,92 +1,54 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 export const TechGridBackground = () => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let width = window.innerWidth;
-    let height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-
-    const gridSize = 40;
-    const particles: { x: number; y: number; vx: number; vy: number; life: number }[] = [];
-
-    const handleResize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    const animate = () => {
-      ctx.clearRect(0, 0, width, height);
-
-      // Draw Grid
-      ctx.beginPath();
-      ctx.strokeStyle = 'rgba(59, 130, 246, 0.05)';
-      ctx.lineWidth = 1;
-
-      for (let x = 0; x <= width; x += gridSize) {
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
-      }
-
-      for (let y = 0; y <= height; y += gridSize) {
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-      }
-      ctx.stroke();
-
-      // Animate subtle "tech" particles along lines
-      if (Math.random() > 0.9) {
-        const isVertical = Math.random() > 0.5;
-        if (isVertical) {
-            const x = Math.floor(Math.random() * (width / gridSize)) * gridSize;
-            particles.push({ x, y: 0, vx: 0, vy: 2, life: 1 });
-        } else {
-            const y = Math.floor(Math.random() * (height / gridSize)) * gridSize;
-            particles.push({ x: 0, y, vx: 2, vy: 0, life: 1 });
-        }
-      }
-
-      ctx.fillStyle = 'rgba(59, 130, 246, 0.3)';
-      for (let i = particles.length - 1; i >= 0; i--) {
-        const p = particles[i];
-        p.x += p.vx;
-        p.y += p.vy;
-
-        ctx.fillRect(p.x - 1, p.y - 1, 3, 3);
-
-        if (p.x > width || p.y > height) {
-          particles.splice(i, 1);
-        }
-      }
-
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-0 opacity-50"
-    />
+    <>
+      <div className="tech-grid-overlay" />
+      <style jsx global>{`
+        /* Premium Sharp Technology Grid Container */
+        .tech-grid-overlay {
+          position: fixed;
+          inset: 0;
+          z-index: 0;
+          pointer-events: none;
+
+          /* High-visibility multi-color grid lines rendering utilizing the core matching accents */
+          background-image:
+            linear-gradient(to right, rgba(6, 182, 212, 0.5) 1px, transparent 1px),     /* Cyan */
+            linear-gradient(to bottom, rgba(236, 72, 153, 0.5) 1px, transparent 1px),   /* Deep Pink */
+            linear-gradient(to right, rgba(245, 158, 11, 0.4) 2px, transparent 2px),    /* Vivid Amber */
+            linear-gradient(to bottom, rgba(168, 85, 247, 0.4) 2px, transparent 2px),  /* Purple */
+            linear-gradient(to right, rgba(16, 185, 129, 0.3) 1px, transparent 1px),   /* Emerald Green */
+            linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px),   /* Royal Blue */
+            linear-gradient(to right, rgba(244, 63, 94, 0.25) 2px, transparent 2px),    /* Coral Red */
+            linear-gradient(to bottom, rgba(99, 102, 241, 0.25) 2px, transparent 2px);  /* Electric Indigo */
+
+          /* Multi-density geometric frequency patterns */
+          background-size: 30px 30px, 30px 30px, 120px 120px, 120px 120px, 60px 60px, 60px 60px, 180px 180px, 180px 180px;
+          background-repeat: repeat;
+
+          /* Linear Mask Travel Animation Integration */
+          animation: gridSweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        /* Precise linear sweeping mask travel vector mechanics (Bottom-Left to Top-Right) */
+        @keyframes gridSweep {
+          0% {
+            -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 30%);
+            mask-image: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 30%);
+          }
+          50% {
+            -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 80%);
+            mask-image: linear-gradient(45deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 45%, rgba(0,0,0,0.4) 65%, rgba(0,0,0,0) 80%);
+          }
+          100% {
+            -webkit-mask-image: linear-gradient(45deg, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,1) 100%);
+            mask-image: linear-gradient(45deg, rgba(0,0,0,0) 70%, rgba(0,0,0,0.3) 85%, rgba(0,0,0,1) 100%);
+          }
+        }
+      `}</style>
+    </>
   );
 };

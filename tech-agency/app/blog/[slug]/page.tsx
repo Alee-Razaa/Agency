@@ -1,9 +1,9 @@
-import { BLOG_POSTS } from '@/constants/blog';
+import { BLOG_POSTS } from '@/src/constants/blog';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, ChevronLeft, Share2 } from 'lucide-react';
-import { Badge } from '@/components/Badge';
+import { Badge } from '@/src/components/Badge';
 import { Metadata } from 'next';
 
 interface PageProps {

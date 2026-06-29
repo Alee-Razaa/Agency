@@ -34,13 +34,13 @@ export const OFFERS_DATA: Offer[] = [
     longDesc: "Get premium custom AI Voice Agent that automates appointment scheduling, lead qualification, and customer support for your business, available 24/7. This solution goes beyond standard chatbots by reasoning, planning, and executing tasks tailored to your needs.",
     price: 260,
     deliveryDays: 4,
-    views: 23,
-    sales: 0,
+    views: 124,
+    sales: 12,
     ctaLink: "https://www.peopleperhour.com/hourlie/ai-voice-agent-for-calls-appoinment-booking-sales-automation/1118141",
     images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80"
+      "/images/AI_voice_agent_for_booking_appoinment.png",
+      "/images/AI_voice_agent_for_booking_appoinment (2) .png",
+      "/images/AI_voice_agent_for_booking_appoinment (3) .png"
     ],
     deliverables: [
       "Custom Voice AI Agent supporting up to three scenarios",
@@ -60,7 +60,9 @@ export const OFFERS_DATA: Offer[] = [
     requirements: [
       "A clear description of your business and main use case",
       "Access to your CRM, calendar, or other systems for integration",
-      "Call flow or appointment booking requirements"
+      "Call flow or appointment booking requirements",
+      "Any specific voice preferences",
+      "Branding guidelines"
     ],
     workflow: [
       "Scoping call to define objectives and technology stack",
@@ -84,13 +86,13 @@ export const OFFERS_DATA: Offer[] = [
     longDesc: "Let's build fast. Let's validate faster. I deliver everything you need across the development, deployment, and maintenance lifecycle using next-generation tools like Lovable, Replit, and Cursor.",
     price: 260,
     deliveryDays: 4,
-    views: 26,
-    sales: 0,
+    views: 158,
+    sales: 8,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80"
+      "/images/AI_powered_full_Stack Solutions.png",
+      "/images/AI_powered_full_Stack Solutions secondry.png",
+      "/images/AI_powered_full_Stack Solutions 3rd.png"
     ],
     deliverables: [
       "Clean, responsive frontend (Next.js + React + Tailwind CSS)",
@@ -108,7 +110,9 @@ export const OFFERS_DATA: Offer[] = [
     requirements: [
       "Your core app idea outlined in 1 descriptive paragraph",
       "Key list of features and pages required",
-      "Design references (3 websites you like)"
+      "Design references (3 websites you like)",
+      "Domain and hosting information",
+      "Necessary API keys and credentials"
     ],
     workflow: [
       "Architecture alignment and technology mapping roadmap",
@@ -127,6 +131,92 @@ export const OFFERS_DATA: Offer[] = [
   },
   {
     id: 3,
+    slug: "n8n-automation",
+    title: "Programmatic Content Automation Pipelines via n8n / Make",
+    tagline: "Deploy Zero-Touch Omnichannel Asset Production Systems",
+    shortDesc: "Architect programmatic asset generation, deployment scripts, and delivery pipelines powered by Make/n8n.",
+    longDesc: "Eliminate manual file movements and asset editing overhead. I build automated multi-channel logic blocks using n8n or Make to automatically pull data, stitch visuals, and distribute content on autopilot.",
+    price: 310,
+    deliveryDays: 4,
+    views: 89,
+    sales: 5,
+    ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+    images: [
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80"
+    ],
+    deliverables: [
+      "Custom n8n or Make structural pipeline configuration blueprint",
+      "Multi-platform API integration connection array maps",
+      "Dynamic data parsing templates for auto-generation assets",
+      "Unified failure logging monitoring notification rules"
+    ],
+    exclusions: [
+      "Platform API paywall premium costs",
+      "Manual content moderation adjustments"
+    ],
+    requirements: [
+      "Make or n8n organization access privileges",
+      "Target asset generation design rules frameworks",
+      "Media platform publishing account API authorizations"
+    ],
+    workflow: [
+      "Data routing schematic design mapping",
+      "Webhook connection payload tests",
+      "Error handling and exception logic structural integration",
+      "Handoff training"
+    ],
+    addOns: [
+      { title: "Advanced secure data collection logging system templates", days: 1, price: 95 },
+      { title: "Additional 3 cross-channel distribution pipeline configurations", days: 2, price: 140 }
+    ]
+  },
+  {
+    id: 4,
+    slug: "seo-aeo-visibility",
+    title: "Visibility Dominance Engines (SEO / AEO Optimization)",
+    tagline: "Rank Across Legacy Algorithms and LLM Answer Models",
+    shortDesc: "Optimize brand real estate across next-generation generative answer models and traditional ranking algorithms.",
+    longDesc: "Traditional search is changing. I engineer schema structures and optimize index structures to ensure your service models clear visibility thresholds when queried by generative AI engines and standard crawlers.",
+    price: 290,
+    deliveryDays: 6,
+    views: 74,
+    sales: 3,
+    ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
+    images: [
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80"
+    ],
+    deliverables: [
+      "Comprehensive AI search citation audit mapping profiles",
+      "Semantic JSON-LD structure layout optimization",
+      "High-intent keyword matrix research for LLM discovery modules",
+      "Core Web Vitals acceleration performance tuning"
+    ],
+    exclusions: [
+      "Ongoing continuous monthly backlink building retainers",
+      "Heavy multi-page legacy content ghostwriting models"
+    ],
+    requirements: [
+      "Google Search Console access parameters",
+      "Target list of structural competitors",
+      "Core platform backend code access authorization"
+    ],
+    workflow: [
+      "Technical crawler diagnostic analysis",
+      "Semantic architecture structural rewrite implementation",
+      "Vector visibility rank tracking indexing baseline configuration",
+      "Performance sign-off validation"
+    ],
+    addOns: [
+      { title: "Competitor content gap strategy roadmap formulation", days: 2, price: 120 },
+      { title: "Automated real-time schema validator tooling integration", days: 1, price: 80 }
+    ]
+  },
+  {
+    id: 5,
     slug: "cross-channel-commerce",
     title: "Cross-Channel Commerce Hubs (Shopify / TikTok / IG Shops)",
     tagline: "Sync Inventories & Automate Checkouts Across Social Matrices",
@@ -134,8 +224,8 @@ export const OFFERS_DATA: Offer[] = [
     longDesc: "Bring your product line to where your audience drops attention. I build centralized inventory synchronization frameworks linking your backend catalogs instantly to TikTok Shops, Instagram Storefronts, and Shopify cores.",
     price: 340,
     deliveryDays: 5,
-    views: 45,
-    sales: 1,
+    views: 92,
+    sales: 4,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
       "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
@@ -155,7 +245,8 @@ export const OFFERS_DATA: Offer[] = [
     ],
     requirements: [
       "Active merchant configurations or platform login parameters",
-      "High-resolution catalog product images and variants lists"
+      "High-resolution catalog product images and variants lists",
+      "Corporate tax identifiers where required by platforms"
     ],
     workflow: [
       "Inventory schema validation",
@@ -169,90 +260,6 @@ export const OFFERS_DATA: Offer[] = [
     ]
   },
   {
-    id: 4,
-    slug: "seo-aeo-engines",
-    title: "Visibility Dominance Engines (SEO / AEO Optimization)",
-    tagline: "Rank Across Legacy Algorithms and LLM Answer Models",
-    shortDesc: "Optimize brand real estate across next-generation generative answer models and traditional ranking algorithms.",
-    longDesc: "Traditional search is changing. I engineer schema structures and optimize index structures to ensure your service models clear visibility thresholds when queried by generative AI engines and standard crawlers.",
-    price: 290,
-    deliveryDays: 6,
-    views: 19,
-    sales: 0,
-    ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
-    images: [
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80"
-    ],
-    deliverables: [
-      "Comprehensive AI search citation audit mapping profiles",
-      "Semantic JSON-LD structure layout optimization",
-      "High-intent keyword matrix research for LLM discovery modules",
-      "Core Web Vitals acceleration performance tuning"
-    ],
-    exclusions: [
-      "Ongoing continuous monthly backlink building retainers",
-      "Heavy multi-page legacy content ghostwriting models"
-    ],
-    requirements: [
-      "Google Search Console access parameters",
-      "Target list of structural competitors"
-    ],
-    workflow: [
-      "Technical crawler diagnostic analysis",
-      "Semantic architecture structural rewrite implementation",
-      "Vector visibility rank tracking indexing baseline configuration",
-      "Performance sign-off validation"
-    ],
-    addOns: [
-      { title: "Competitor content gap strategy roadmap formulation", days: 2, price: 120 },
-      { title: "Automated real-time schema validator tooling integration", days: 1, price: 80 }
-    ]
-  },
-  {
-    id: 5,
-    slug: "content-automation",
-    title: "Programmatic Content Automation Pipelines via n8n / Make",
-    tagline: "Deploy Zero-Touch Omnichannel Asset Production Systems",
-    shortDesc: "Architect programmatic asset generation, deployment scripts, and delivery pipelines powered by Make/n8n.",
-    longDesc: "Eliminate manual file movements and asset editing overhead. I build automated multi-channel logic blocks using n8n or Make to automatically pull data, stitch visuals, and distribute content on autopilot.",
-    price: 310,
-    deliveryDays: 4,
-    views: 38,
-    sales: 2,
-    ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
-    images: [
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80"
-    ],
-    deliverables: [
-      "Custom n8n or Make structural pipeline configuration blueprint",
-      "Multi-platform API integration connection array maps",
-      "Dynamic data parsing templates for auto-generation assets",
-      "Unified failure logging monitoring notification rules"
-    ],
-    exclusions: [
-      "Platform API paywall premium costs",
-      "Manual content moderation adjustments"
-    ],
-    requirements: [
-      "Make or n8n organization access privileges",
-      "Target asset generation design rules frameworks"
-    ],
-    workflow: [
-      "Data routing schematic design mapping",
-      "Webhook connection payload tests",
-      "Error handling and exception logic structural integration",
-      "Handoff training"
-    ],
-    addOns: [
-      { title: "Advanced secure data collection logging system templates", days: 1, price: 95 },
-      { title: "Additional 3 cross-channel distribution pipeline configurations", days: 2, price: 140 }
-    ]
-  },
-  {
     id: 6,
     slug: "enterprise-dashboards",
     title: "Enterprise Database Sync & Real-Time Analytics Boards",
@@ -261,13 +268,13 @@ export const OFFERS_DATA: Offer[] = [
     longDesc: "Stop guessing your daily throughput or operational health. I build secure analytical monitoring dashboards mapping directly to unified MongoDB or Postgres setups to surface performance data instantly.",
     price: 450,
     deliveryDays: 7,
-    views: 52,
-    sales: 4,
+    views: 65,
+    sales: 2,
     ctaLink: "https://www.peopleperhour.com/hourlie/build-full-stack-web-app-with-lovable-replit-claude-cursor/1118473",
     images: [
-      "https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&auto=format&fit=crop&q=80",
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600&auto=format&fit=crop&q=80"
+      "https://images.unsplash.com/photo-1551288049-bbbda536339a?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80",
+      "https://images.unsplash.com/photo-1504868584819-f8e90526354c?w=600&auto=format&fit=crop&q=80"
     ],
     deliverables: [
       "Interactive data dashboard built with Chart.js or Tremor layouts",
@@ -281,7 +288,8 @@ export const OFFERS_DATA: Offer[] = [
     ],
     requirements: [
       "Database host server access protocols",
-      "KPI dictionary layout metrics spreadsheet configuration specs"
+      "KPI dictionary layout metrics spreadsheet configuration specs",
+      "Target server infrastructure console setup parameters"
     ],
     workflow: [
       "Database schema entity validation layout alignment",

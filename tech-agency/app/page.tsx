@@ -7,6 +7,11 @@ import { TestimonialsSection } from '@/src/components/sections/TestimonialsSecti
 import { CTASection } from '@/src/components/sections/CTASection';
 import { Terminal } from '@/src/components/Terminal';
 import { Badge } from '@/src/components/Badge';
+import { ScrollReveal } from '@/src/components/ScrollReveal';
+import { TechStackMarquee } from '@/src/components/sections/TechStackMarquee';
+import { BenefitsGrid } from '@/src/components/sections/BenefitsGrid';
+import { ActiveEngineers } from '@/src/components/sections/ActiveEngineers';
+import { TechGridBackground } from '@/src/components/TechGridBackground';
 
 export const metadata = generateMetadata({
   title: 'AI-Powered Acquisition | Smarter Systems | Adapta Agency',
@@ -15,24 +20,11 @@ export const metadata = generateMetadata({
   keywords: ['AI Voice Agent', 'Full Stack AI App', 'Content Automation', 'SEO Engine', 'n8n automation'],
 });
 
-const TESTIMONIALS = [
-  {
-    quote: 'The AI Voice Agent reduced our appointment booking overhead by 70%. Absolute game changer.',
-    author: 'Mark Sullivan',
-    title: 'Director of Operations',
-    company: 'Nexus Real Estate',
-  },
-  {
-    quote: 'Rapid MVP development that actually scales. We launched our full-stack app in record time.',
-    author: 'Sarah Chen',
-    title: 'Founder',
-    company: 'FinTech Flow',
-  },
-];
-
 export default function HomePage() {
   return (
-    <main className="bg-[#030712]">
+    <main className="bg-[#030712] relative min-h-screen">
+      <TechGridBackground />
+
       <SchemaScript
         schema={schemas.organization({
           name: 'Adapta Tech Agency',
@@ -44,66 +36,60 @@ export default function HomePage() {
         })}
       />
 
-      {/* Kinetic Orbit System Centerpiece */}
-      <HeroSection />
+      <div className="relative z-10">
+        <HeroSection />
 
-      {/* Offers & Services Dashboard */}
-      <div id="services">
-        <OffersCarousel />
-      </div>
+        <ScrollReveal delay={0.1}>
+          <TechStackMarquee />
+        </ScrollReveal>
 
-      <FeaturesSection
-        headline="Why We Lead"
-        features={[
-          {
-            icon: '⚡',
-            title: 'Rapid Deployment',
-            description: 'From architecture to production in days, not months.',
-            details: ['Next.js & Supabase Stack', 'Automated CI/CD', 'Rapid MVP Cycles'],
-          },
-          {
-            icon: '🤖',
-            title: 'Intelligent Logic',
-            description: 'Advanced reasoning loops that execute tasks autonomously.',
-            details: ['Custom LLM Workflows', 'n8n & Make Automation', 'Voice AI Mastery'],
-          },
-          {
-            icon: '📈',
-            title: 'Engineered for Scale',
-            description: 'Built to handle thousands of concurrent requests without friction.',
-            details: ['Serverless Architecture', 'Edge Performance', 'Database Optimization'],
-          },
-        ]}
-      />
-
-      <TestimonialsSection
-        headline="Proven Performance"
-        testimonials={TESTIMONIALS}
-      />
-
-      <section className="py-24 bg-background relative overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="flex flex-col items-center text-center mb-16">
-            <Badge text="Transparency" className="mb-4" />
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Real-Time <span className="text-primary">Ops Portal</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl">
-              Experience our transparent development process. Interact with our live portal prototype to see how we track and manage high-performance deployments.
-            </p>
+        <ScrollReveal delay={0.2}>
+          <div id="services">
+            <OffersCarousel />
           </div>
-          <Terminal />
-        </div>
+        </ScrollReveal>
 
-        {/* Background Gradients */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-      </section>
+        <ScrollReveal delay={0.1}>
+          <BenefitsGrid />
+        </ScrollReveal>
 
-      <CTASection
-        headline="Ready to Automate?"
-        description="Schedule a 30-minute infrastructure mapping session with our lead architects."
-        primaryCTA={{ text: 'Book a Strategy Call', href: '/contact' }}
-      />
+        <ScrollReveal delay={0.1}>
+          <ActiveEngineers />
+        </ScrollReveal>
+
+        <ScrollReveal direction="left" delay={0.2}>
+          <TestimonialsSection />
+        </ScrollReveal>
+
+        <section className="py-24 relative overflow-hidden">
+          <div className="container mx-auto px-4 relative z-10">
+            <ScrollReveal direction="up" className="flex flex-col items-center text-center mb-16">
+              <Badge text="Transparency" className="mb-4" />
+              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+                Real-Time <span className="text-primary">Ops Portal</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl font-light">
+                Experience our transparent development process. Interact with our live portal prototype to see how we track and manage high-performance deployments.
+              </p>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <Terminal />
+            </ScrollReveal>
+          </div>
+
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
+        </section>
+
+        <ScrollReveal direction="up">
+          <CTASection
+            headline="Ready to Automate?"
+            description="Schedule a 30-minute infrastructure mapping session with our lead architects."
+            primaryCTA={{ text: 'Book a Strategy Call', href: '/contact' }}
+          />
+        </ScrollReveal>
+      </div>
     </main>
   );
 }
+
