@@ -5,12 +5,11 @@ import { OffersCarousel } from '@/src/components/sections/OffersCarousel';
 import { FeaturesSection } from '@/src/components/sections/FeaturesSection';
 import { TestimonialsSection } from '@/src/components/sections/TestimonialsSection';
 import { CTASection } from '@/src/components/sections/CTASection';
-import { Terminal } from '@/src/components/Terminal';
-import { Badge } from '@/src/components/Badge';
 import { ScrollReveal } from '@/src/components/ScrollReveal';
 import { TechStackMarquee } from '@/src/components/sections/TechStackMarquee';
 import { BenefitsGrid } from '@/src/components/sections/BenefitsGrid';
 import { ActiveEngineers } from '@/src/components/sections/ActiveEngineers';
+import { OpsPortalSection } from '@/src/components/sections/OpsPortalSection';
 import { TechGridBackground } from '@/src/components/TechGridBackground';
 
 export const metadata = generateMetadata({
@@ -22,7 +21,7 @@ export const metadata = generateMetadata({
 
 export default function HomePage() {
   return (
-    <main className="bg-white relative min-h-screen">
+    <main className="bg-slate-950 relative min-h-screen">
       <TechGridBackground />
 
       <SchemaScript
@@ -44,9 +43,7 @@ export default function HomePage() {
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <div id="services">
-            <OffersCarousel />
-          </div>
+          <OffersCarousel />
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
@@ -61,25 +58,7 @@ export default function HomePage() {
           <TestimonialsSection />
         </ScrollReveal>
 
-        <section className="py-24 relative overflow-hidden">
-          <div className="container mx-auto px-4 relative z-10">
-            <ScrollReveal direction="up" className="flex flex-col items-center text-center mb-16">
-              <Badge text="Transparency" className="mb-4" />
-              <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-tech">
-                Real-Time <span className="text-indigo-600">Ops Portal</span>
-              </h2>
-              <p className="text-slate-500 max-w-2xl font-light">
-                Experience our transparent development process. Interact with our live portal prototype to see how we track and manage high-performance deployments.
-              </p>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.4}>
-              <Terminal />
-            </ScrollReveal>
-          </div>
-
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
-        </section>
+        <OpsPortalSection />
 
         <ScrollReveal direction="up">
           <CTASection
@@ -92,4 +71,3 @@ export default function HomePage() {
     </main>
   );
 }
-

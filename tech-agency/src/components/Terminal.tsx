@@ -88,24 +88,24 @@ export const Terminal = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto rounded-xl overflow-hidden border-2 border-slate-100 bg-white shadow-2xl font-mono text-sm relative z-10">
+    <div className="w-full max-w-6xl mx-auto rounded-lg sm:rounded-xl overflow-hidden border border-slate-200 sm:border-2 bg-white shadow-xl sm:shadow-2xl font-mono text-xs sm:text-sm relative z-10">
       {/* Title Bar */}
-      <div className="bg-slate-900 px-4 py-2 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <TerminalIcon className="w-4 h-4 text-cyan-400" />
-          <span className="text-slate-400 text-[10px] font-tech uppercase tracking-widest">ops-portal — bash</span>
+      <div className="bg-slate-900 px-3 py-2.5 sm:py-3 md:px-4 md:py-4 flex items-center justify-between">
+        <div className="flex items-center gap-2 overflow-hidden">
+          <TerminalIcon className="w-4 h-4 md:w-5 md:h-5 text-cyan-400 shrink-0" />
+          <span className="text-slate-400 text-[10px] md:text-xs font-tech uppercase tracking-tight md:tracking-widest truncate">ops-portal — bash</span>
         </div>
-        <div className="flex gap-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
+        <div className="flex gap-1.5 md:gap-2 shrink-0">
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-rose-500/80" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-amber-500/80" />
+          <div className="w-2.5 h-2.5 md:w-3 md:h-3 rounded-full bg-emerald-500/80" />
         </div>
       </div>
 
       {/* Terminal Content */}
       <div
         ref={scrollRef}
-        className="h-80 p-6 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent bg-slate-50/30"
+        className="h-[280px] sm:h-[350px] md:h-[400px] lg:h-[500px] p-3 sm:p-4 md:p-8 overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent bg-slate-50/30 text-xs sm:text-sm md:text-base"
       >
         {lines.map((line, i) => (
           <div key={i} className={`mb-1.5 ${
@@ -126,7 +126,6 @@ export const Terminal = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             className="flex-1 bg-transparent border-none outline-none text-indigo-600 focus:ring-0 p-0 font-bold"
-            autoFocus
             spellCheck={false}
           />
         </form>

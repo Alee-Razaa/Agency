@@ -1,0 +1,808 @@
+{
+  "meta": {
+    "company": "TechValley.uk",
+    "currency": "GBP",
+    "lastUpdated": "2026-07-01",
+    "note": "Prices and delivery times are starting estimates. Final scope and price are confirmed with the client before work begins."
+  },
+  "offers": [
+    {
+      "id": "ai-agent-development",
+      "category": "AI Services",
+      "subcategory": "AI Agent Development",
+      "card": {
+        "title": "Custom AI Agent for Your Business Workflow",
+        "description": "A working AI agent built around one real task in your business, connected to your existing tools, ready to run on its own.",
+        "price": 450,
+        "currency": "GBP",
+        "deliveryDays": 7,
+        "link": "/offers/ai-agent-development"
+      },
+      "detail": {
+        "headline": "Build an AI Agent That Actually Does the Work",
+        "overview": "Most AI agents shown in demos never reach production. I design and build agents scoped to one clear job, for example replying to support tickets, qualifying leads, or pulling data from your systems, then test against real cases before handover.",
+        "deliverables": [
+          "Working AI agent connected to your chosen tools",
+          "Documented logic for how the agent makes decisions",
+          "Error handling so the agent fails safely instead of silently",
+          "Short handover session and usage guide"
+        ],
+        "addons": [
+          { "name": "Extra workflow branch", "price": 80 },
+          { "name": "Monthly monitoring and tuning", "price": 120 }
+        ],
+        "prerequisites": [
+          "Access to the systems the agent needs to read or write",
+          "A clear example of the task done manually at least once"
+        ],
+        "process": [
+          { "step": 1, "title": "Discovery call to define the one job the agent will do" },
+          { "step": 2, "title": "Build and connect the agent to your tools" },
+          { "step": 3, "title": "Test against real examples and fix edge cases" },
+          { "step": 4, "title": "Handover and short training session" }
+        ],
+        "totalInvestment": 450,
+        "deliveryTime": "7 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-chatbot-development",
+      "category": "AI Services",
+      "subcategory": "AI Chatbot Development",
+      "card": {
+        "title": "AI Chatbot for Your Website or WhatsApp",
+        "description": "A chatbot trained on your own content that answers customer questions correctly, day or night.",
+        "price": 280,
+        "currency": "GBP",
+        "deliveryDays": 5,
+        "link": "/offers/ai-chatbot-development"
+      },
+      "detail": {
+        "headline": "A Chatbot That Knows Your Business, Not Just General Answers",
+        "overview": "I build the chatbot on your actual product information, pricing, and policies, so it gives correct answers instead of generic ones. It works on your website, WhatsApp, or both.",
+        "deliverables": [
+          "Chatbot trained on your content",
+          "Website or WhatsApp integration",
+          "Fallback to human handover for questions it cannot answer",
+          "Basic analytics on what customers ask"
+        ],
+        "addons": [
+          { "name": "Add a second language", "price": 60 },
+          { "name": "Add a second channel, for example Instagram", "price": 70 }
+        ],
+        "prerequisites": [
+          "Your FAQ, product, or service information",
+          "Access to your website or WhatsApp Business account"
+        ],
+        "process": [
+          { "step": 1, "title": "Collect and structure your business content" },
+          { "step": 2, "title": "Build and train the chatbot" },
+          { "step": 3, "title": "Test with real customer questions" },
+          { "step": 4, "title": "Launch and handover" }
+        ],
+        "totalInvestment": 280,
+        "deliveryTime": "5 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-integration",
+      "category": "AI Services",
+      "subcategory": "AI Integration",
+      "card": {
+        "title": "Add AI Features to Your Existing App or Site",
+        "description": "Drop AI into a product you already have, without rebuilding it from scratch.",
+        "price": 320,
+        "currency": "GBP",
+        "deliveryDays": 6,
+        "link": "/offers/ai-integration"
+      },
+      "detail": {
+        "headline": "Add AI to What You Already Built",
+        "overview": "You do not need a new product to use AI. I connect AI features, such as smart search, summarization, or recommendations, directly into your existing codebase with minimal disruption to what already works.",
+        "deliverables": [
+          "AI feature integrated into your existing app",
+          "Clean, documented code that fits your stack",
+          "Cost control settings so AI usage does not run away",
+          "Basic testing report"
+        ],
+        "addons": [
+          { "name": "Extra AI feature", "price": 100 },
+          { "name": "Usage dashboard", "price": 90 }
+        ],
+        "prerequisites": [
+          "Access to your codebase or a staging environment",
+          "A clear idea of which feature you want AI to power"
+        ],
+        "process": [
+          { "step": 1, "title": "Review your current codebase" },
+          { "step": 2, "title": "Plan where and how AI fits in" },
+          { "step": 3, "title": "Build, connect, and test the feature" },
+          { "step": 4, "title": "Deploy and monitor initial usage" }
+        ],
+        "totalInvestment": 320,
+        "deliveryTime": "6 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-website-development",
+      "category": "AI Services",
+      "subcategory": "AI Website Development",
+      "card": {
+        "title": "AI Powered Website Build",
+        "description": "A new website with AI built in from day one, for search, personalization, or a built in assistant.",
+        "price": 600,
+        "currency": "GBP",
+        "deliveryDays": 10,
+        "link": "/offers/ai-website-development"
+      },
+      "detail": {
+        "headline": "A Website Designed Around AI From the Start",
+        "overview": "Instead of adding AI onto an old site, this is a website planned with AI features from the first wireframe, whether that is an on site assistant, smart product search, or personalized content.",
+        "deliverables": [
+          "Fully built website with chosen AI feature",
+          "Mobile responsive design",
+          "Basic SEO and AEO friendly content structure",
+          "Deployment and one round of revisions"
+        ],
+        "addons": [
+          { "name": "Extra page", "price": 50 },
+          { "name": "Blog setup with AEO ready structure", "price": 80 }
+        ],
+        "prerequisites": [
+          "Domain and hosting access, or willingness to set up new",
+          "Brand basics, logo, colors, any existing copy"
+        ],
+        "process": [
+          { "step": 1, "title": "Plan site structure and chosen AI feature" },
+          { "step": 2, "title": "Design and build pages" },
+          { "step": 3, "title": "Connect and test the AI feature" },
+          { "step": 4, "title": "Launch and handover" }
+        ],
+        "totalInvestment": 600,
+        "deliveryTime": "10 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-mobile-development",
+      "category": "AI Services",
+      "subcategory": "AI Mobile Development",
+      "card": {
+        "title": "AI Powered Mobile App Build",
+        "description": "A mobile app with a real AI feature at its core, built for iOS and Android from one codebase.",
+        "price": 850,
+        "currency": "GBP",
+        "deliveryDays": 14,
+        "link": "/offers/ai-mobile-development"
+      },
+      "detail": {
+        "headline": "A Mobile App Built Around One Strong AI Feature",
+        "overview": "Rather than a generic app with AI added later, I build the app around the AI feature that makes it useful, for example a recommendation engine, voice input, or smart automation, using a cross platform framework so it ships to iOS and Android together.",
+        "deliverables": [
+          "Cross platform app, iOS and Android",
+          "Core AI feature built and tested",
+          "App store submission package",
+          "Source code handover"
+        ],
+        "addons": [
+          { "name": "Push notifications setup", "price": 70 },
+          { "name": "Extra screen or feature", "price": 100 }
+        ],
+        "prerequisites": [
+          "App concept or wireframes if you have them",
+          "Developer accounts for app stores, or help setting these up"
+        ],
+        "process": [
+          { "step": 1, "title": "Define the core feature and app flow" },
+          { "step": 2, "title": "Build the app and AI feature together" },
+          { "step": 3, "title": "Test on real devices" },
+          { "step": 4, "title": "Prepare and submit to app stores" }
+        ],
+        "totalInvestment": 850,
+        "deliveryTime": "14 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-software-development",
+      "category": "AI Services",
+      "subcategory": "AI Software Development",
+      "card": {
+        "title": "Custom AI Tool or Internal Software",
+        "description": "An internal tool or small AI product built for your exact workflow, not a generic template.",
+        "price": 700,
+        "currency": "GBP",
+        "deliveryDays": 12,
+        "link": "/offers/ai-software-development"
+      },
+      "detail": {
+        "headline": "Software Built Around Your Exact Process",
+        "overview": "When off the shelf tools do not fit how your business actually works, I build a small custom tool with AI where it earns its place, used internally or as the start of a product.",
+        "deliverables": [
+          "Working software matched to your defined scope",
+          "Clean, documented codebase",
+          "Basic admin or settings panel",
+          "Deployment to your chosen hosting"
+        ],
+        "addons": [
+          { "name": "User accounts and permissions", "price": 120 },
+          { "name": "Extra integration", "price": 100 }
+        ],
+        "prerequisites": [
+          "Written description of the workflow the tool should support",
+          "Access to any systems it needs to connect with"
+        ],
+        "process": [
+          { "step": 1, "title": "Map your current workflow and pain points" },
+          { "step": 2, "title": "Design the tool and confirm scope" },
+          { "step": 3, "title": "Build and test" },
+          { "step": 4, "title": "Deploy and handover" }
+        ],
+        "totalInvestment": 700,
+        "deliveryTime": "12 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-fine-tuning",
+      "category": "AI Services",
+      "subcategory": "AI Fine-Tuning",
+      "card": {
+        "title": "Fine Tune an AI Model on Your Business Data",
+        "description": "Take a general AI model and tune it to your tone, your products, and your real questions.",
+        "price": 500,
+        "currency": "GBP",
+        "deliveryDays": 9,
+        "link": "/offers/ai-fine-tuning"
+      },
+      "detail": {
+        "headline": "Make a General Model Speak Like Your Business",
+        "overview": "General models give general answers. I fine tune or ground a model on your own documents, past conversations, or product data so its answers reflect your business specifically, not the internet average.",
+        "deliverables": [
+          "Fine tuned or grounded model setup",
+          "Evaluation report comparing before and after",
+          "Documentation of the data and method used",
+          "Guidance on keeping it updated"
+        ],
+        "addons": [
+          { "name": "Additional data source added", "price": 80 },
+          { "name": "Quarterly retraining package", "price": 150 }
+        ],
+        "prerequisites": [
+          "Your data, for example past support chats, product docs, FAQs",
+          "Clear examples of what good answers should look like"
+        ],
+        "process": [
+          { "step": 1, "title": "Review and prepare your data" },
+          { "step": 2, "title": "Fine tune or ground the model" },
+          { "step": 3, "title": "Test against real questions" },
+          { "step": 4, "title": "Deliver with evaluation report" }
+        ],
+        "totalInvestment": 500,
+        "deliveryTime": "9 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ai-business-strategy",
+      "category": "AI Services",
+      "subcategory": "AI Business Strategy",
+      "card": {
+        "title": "AI Readiness Audit and Roadmap",
+        "description": "A clear, honest review of where AI can actually save you time or money, and where it cannot yet.",
+        "price": 220,
+        "currency": "GBP",
+        "deliveryDays": 4,
+        "link": "/offers/ai-business-strategy"
+      },
+      "detail": {
+        "headline": "Know Where AI Helps Before You Spend on It",
+        "overview": "Most businesses do not need ten AI tools, they need one or two used well. I review your current operations and give a short, practical roadmap of where AI is worth building now, and where it is not yet worth the cost.",
+        "deliverables": [
+          "Written audit of current workflows",
+          "Prioritized list of AI opportunities with rough cost and effort",
+          "One follow up call to walk through findings"
+        ],
+        "addons": [
+          { "name": "Extended workshop with your team", "price": 100 },
+          { "name": "Vendor and tool comparison", "price": 60 }
+        ],
+        "prerequisites": [
+          "A short call or written summary of your current operations"
+        ],
+        "process": [
+          { "step": 1, "title": "Initial call to understand your business" },
+          { "step": 2, "title": "Review current workflows and tools" },
+          { "step": 3, "title": "Build the roadmap" },
+          { "step": 4, "title": "Walkthrough call" }
+        ],
+        "totalInvestment": 220,
+        "deliveryTime": "4 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "website-development",
+      "category": "Technology and Programming",
+      "subcategory": "Website Development",
+      "card": {
+        "title": "Build Full Stack Web App with Lovable, Replit, Claude, Cursor",
+        "description": "A complete web app built fast using modern AI assisted tools, from database to live deployment, then reviewed and hardened by hand.",
+        "price": 480,
+        "currency": "GBP",
+        "deliveryDays": 8,
+        "link": "/offers/website-development"
+      },
+      "detail": {
+        "headline": "A Full Stack App Built Fast, Without Cutting Corners",
+        "overview": "I build full stack web apps using current AI assisted tools to move quickly, then review and harden everything by hand so what ships is solid, not just a fast demo.",
+        "deliverables": [
+          "Full stack app, frontend, backend, and database",
+          "Authentication if needed",
+          "Deployed to live hosting",
+          "One round of revisions"
+        ],
+        "addons": [
+          { "name": "Extra page or feature", "price": 60 },
+          { "name": "Database integration, for example Supabase", "price": 90 }
+        ],
+        "prerequisites": [
+          "Your app idea or rough wireframes",
+          "Any existing brand assets"
+        ],
+        "process": [
+          { "step": 1, "title": "Scope the app and confirm features" },
+          { "step": 2, "title": "Build frontend, backend, and database" },
+          { "step": 3, "title": "Test core flows" },
+          { "step": 4, "title": "Deploy and handover" }
+        ],
+        "totalInvestment": 480,
+        "deliveryTime": "8 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "mobile-app-development",
+      "category": "Technology and Programming",
+      "subcategory": "Mobile App Development",
+      "card": {
+        "title": "Cross Platform Mobile App Build",
+        "description": "One app, built once, shipped to both iOS and Android.",
+        "price": 750,
+        "currency": "GBP",
+        "deliveryDays": 12,
+        "link": "/offers/mobile-app-development"
+      },
+      "detail": {
+        "headline": "One Codebase, Both App Stores",
+        "overview": "Using a cross platform framework, I build your app once and ship it to iOS and Android together, keeping cost and maintenance lower than building two separate native apps.",
+        "deliverables": [
+          "Working app on iOS and Android",
+          "Core features built and tested",
+          "App store listing assets",
+          "Source code handover"
+        ],
+        "addons": [
+          { "name": "Offline mode", "price": 90 },
+          { "name": "In app purchases setup", "price": 110 }
+        ],
+        "prerequisites": [
+          "App concept or wireframes",
+          "Developer accounts, or help setting these up"
+        ],
+        "process": [
+          { "step": 1, "title": "Define core features and flow" },
+          { "step": 2, "title": "Build and test on real devices" },
+          { "step": 3, "title": "Polish and fix edge cases" },
+          { "step": 4, "title": "Submit to app stores" }
+        ],
+        "totalInvestment": 750,
+        "deliveryTime": "12 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "cms-development-wordpress",
+      "category": "Technology and Programming",
+      "subcategory": "CMS Development",
+      "card": {
+        "title": "WordPress Website Build",
+        "description": "A WordPress site you can actually update yourself, built clean and fast.",
+        "price": 260,
+        "currency": "GBP",
+        "deliveryDays": 6,
+        "link": "/offers/cms-development-wordpress"
+      },
+      "detail": {
+        "headline": "A WordPress Site Built to Last, Not Just to Launch",
+        "overview": "I build WordPress sites with a clean theme setup, sensible plugin choices, and a structure that loads fast and is easy for you to edit after handover, without breaking the design.",
+        "deliverables": [
+          "Fully built WordPress site",
+          "Mobile responsive design",
+          "Basic SEO setup",
+          "Short training video on editing content"
+        ],
+        "addons": [
+          { "name": "Extra page", "price": 40 },
+          { "name": "Custom contact form with automation", "price": 50 }
+        ],
+        "prerequisites": [
+          "Hosting and domain, or help setting these up",
+          "Logo, colors, and any existing content"
+        ],
+        "process": [
+          { "step": 1, "title": "Plan site structure and pages" },
+          { "step": 2, "title": "Build and style the site" },
+          { "step": 3, "title": "Add content and test" },
+          { "step": 4, "title": "Launch and handover with training" }
+        ],
+        "totalInvestment": 260,
+        "deliveryTime": "6 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ecommerce-cms-development-shopify",
+      "category": "Technology and Programming",
+      "subcategory": "eCommerce CMS Development",
+      "card": {
+        "title": "Shopify Store Build",
+        "description": "A Shopify store set up properly from products to checkout, ready to take orders.",
+        "price": 350,
+        "currency": "GBP",
+        "deliveryDays": 7,
+        "link": "/offers/ecommerce-cms-development-shopify"
+      },
+      "detail": {
+        "headline": "A Shopify Store That Is Actually Ready to Sell",
+        "overview": "I set up your Shopify store end to end, products, collections, payment, shipping rules, and a theme that matches your brand, so it is genuinely ready for customers, not just a demo store.",
+        "deliverables": [
+          "Fully configured Shopify store",
+          "Product upload, up to 20 products",
+          "Payment and shipping setup",
+          "Basic SEO setup for product pages"
+        ],
+        "addons": [
+          { "name": "Extra products, per 10", "price": 30 },
+          { "name": "Custom theme adjustments", "price": 60 }
+        ],
+        "prerequisites": [
+          "Shopify account",
+          "Product details, images, and pricing"
+        ],
+        "process": [
+          { "step": 1, "title": "Set up store structure and theme" },
+          { "step": 2, "title": "Upload products and configure payments" },
+          { "step": 3, "title": "Set shipping and tax rules" },
+          { "step": 4, "title": "Test checkout and launch" }
+        ],
+        "totalInvestment": 350,
+        "deliveryTime": "7 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "ecommerce-cms-development-social-shops",
+      "category": "Technology and Programming",
+      "subcategory": "eCommerce CMS Development",
+      "card": {
+        "title": "TikTok Shop and Instagram Shop Setup",
+        "description": "Get your products listed and sellable directly on TikTok and Instagram, connected to your existing catalog.",
+        "price": 240,
+        "currency": "GBP",
+        "deliveryDays": 5,
+        "link": "/offers/ecommerce-cms-development-social-shops"
+      },
+      "detail": {
+        "headline": "Sell Where Your Customers Already Are",
+        "overview": "I connect your product catalog to TikTok Shop and Instagram Shopping, set up the required business accounts and policies, and make sure orders flow back into one place you can manage.",
+        "deliverables": [
+          "TikTok Shop setup and product listing",
+          "Instagram Shop setup and product listing",
+          "Catalog connected to your existing store if you have one",
+          "Basic order flow testing"
+        ],
+        "addons": [
+          { "name": "Extra platform, for example Facebook Shop", "price": 60 },
+          { "name": "Product catalog cleanup", "price": 50 }
+        ],
+        "prerequisites": [
+          "Business accounts on TikTok and Instagram",
+          "Product catalog, images, and pricing"
+        ],
+        "process": [
+          { "step": 1, "title": "Set up business and shop accounts" },
+          { "step": 2, "title": "Connect or build the product catalog" },
+          { "step": 3, "title": "Configure policies and shipping" },
+          { "step": 4, "title": "Test orders and launch" }
+        ],
+        "totalInvestment": 240,
+        "deliveryTime": "5 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "programming-coding-api-backend",
+      "category": "Technology and Programming",
+      "subcategory": "Programming and Coding",
+      "card": {
+        "title": "Custom API and Backend Build",
+        "description": "A backend and API built around your data, not forced into a generic template.",
+        "price": 400,
+        "currency": "GBP",
+        "deliveryDays": 8,
+        "link": "/offers/programming-coding-api-backend"
+      },
+      "detail": {
+        "headline": "A Backend Built for Your Actual Data",
+        "overview": "I design and build the API and backend layer your app or site needs, with a database structure that matches your real data instead of a generic boilerplate, so it stays easy to extend later.",
+        "deliverables": [
+          "Working API with documented endpoints",
+          "Database schema designed for your use case",
+          "Basic authentication if needed",
+          "Deployment to your chosen hosting"
+        ],
+        "addons": [
+          { "name": "Extra endpoint group", "price": 60 },
+          { "name": "Admin dashboard", "price": 120 }
+        ],
+        "prerequisites": [
+          "Description of the data and actions your app needs",
+          "Access to any existing systems it must connect with"
+        ],
+        "process": [
+          { "step": 1, "title": "Map data and required actions" },
+          { "step": 2, "title": "Design database and API structure" },
+          { "step": 3, "title": "Build and test endpoints" },
+          { "step": 4, "title": "Deploy and document" }
+        ],
+        "totalInvestment": 400,
+        "deliveryTime": "8 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "programming-coding-automation",
+      "category": "Technology and Programming",
+      "subcategory": "Programming and Coding",
+      "card": {
+        "title": "Workflow Automation with n8n or Make",
+        "description": "Connect your tools so data moves on its own, no more copy and paste between apps.",
+        "price": 230,
+        "currency": "GBP",
+        "deliveryDays": 4,
+        "link": "/offers/programming-coding-automation"
+      },
+      "detail": {
+        "headline": "Stop Moving Data Between Apps by Hand",
+        "overview": "I build automation pipelines in n8n or Make that connect your existing tools, so data, files, and notifications move automatically between them, with proper error handling so nothing silently fails.",
+        "deliverables": [
+          "Working automation pipeline",
+          "Connections between your chosen apps",
+          "Error logging and failure alerts",
+          "Short guide on how to adjust it later"
+        ],
+        "addons": [
+          { "name": "Extra workflow branch", "price": 50 },
+          { "name": "Monthly monitoring", "price": 80 }
+        ],
+        "prerequisites": [
+          "Access to the apps that need to be connected",
+          "A clear description of the manual process today"
+        ],
+        "process": [
+          { "step": 1, "title": "Map the current manual process" },
+          { "step": 2, "title": "Build the automation pipeline" },
+          { "step": 3, "title": "Test with real data" },
+          { "step": 4, "title": "Handover with documentation" }
+        ],
+        "totalInvestment": 230,
+        "deliveryTime": "4 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "erp-crm-development",
+      "category": "Technology and Programming",
+      "subcategory": "ERP/CRM Development",
+      "card": {
+        "title": "Custom CRM Setup or Integration",
+        "description": "A CRM that matches how you actually sell, set up or connected properly the first time.",
+        "price": 380,
+        "currency": "GBP",
+        "deliveryDays": 7,
+        "link": "/offers/erp-crm-development"
+      },
+      "detail": {
+        "headline": "A CRM Set Up the Way Your Sales Process Actually Works",
+        "overview": "I set up or customize your CRM so it matches your real sales stages and reporting needs, and connect it to the other tools you already use, instead of leaving it as a generic out of the box setup.",
+        "deliverables": [
+          "CRM configured to your sales process",
+          "Integration with your existing tools, for example email or forms",
+          "Basic reporting dashboard",
+          "Short training for your team"
+        ],
+        "addons": [
+          { "name": "Extra integration", "price": 80 },
+          { "name": "Custom automation rule", "price": 60 }
+        ],
+        "prerequisites": [
+          "Your current sales process or stages",
+          "Access to the CRM and tools it should connect to"
+        ],
+        "process": [
+          { "step": 1, "title": "Map your sales process" },
+          { "step": 2, "title": "Configure CRM stages and fields" },
+          { "step": 3, "title": "Connect integrations" },
+          { "step": 4, "title": "Test and train your team" }
+        ],
+        "totalInvestment": 380,
+        "deliveryTime": "7 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "social-media-app",
+      "category": "Technology and Programming",
+      "subcategory": "Social Media App",
+      "card": {
+        "title": "Custom Social or Community Feature Build",
+        "description": "Add real social features, profiles, feeds, or messaging, to your existing app.",
+        "price": 420,
+        "currency": "GBP",
+        "deliveryDays": 9,
+        "link": "/offers/social-media-app"
+      },
+      "detail": {
+        "headline": "Add Social Features That Actually Work at Small Scale",
+        "overview": "I build social features such as user profiles, activity feeds, or in app messaging into your existing product, scoped to work well for your current user base rather than over engineered for scale you do not have yet.",
+        "deliverables": [
+          "Chosen social feature built and tested",
+          "Database structure to support it",
+          "Basic moderation or reporting controls",
+          "Deployment to your existing app"
+        ],
+        "addons": [
+          { "name": "Extra feature, for example likes or comments", "price": 70 },
+          { "name": "Push notifications for activity", "price": 70 }
+        ],
+        "prerequisites": [
+          "Access to your existing codebase",
+          "Clear idea of which social feature matters most"
+        ],
+        "process": [
+          { "step": 1, "title": "Scope the feature and data needs" },
+          { "step": 2, "title": "Build and connect it to your app" },
+          { "step": 3, "title": "Test with sample users" },
+          { "step": 4, "title": "Deploy and handover" }
+        ],
+        "totalInvestment": 420,
+        "deliveryTime": "9 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "software-testing",
+      "category": "Technology and Programming",
+      "subcategory": "Software Testing",
+      "card": {
+        "title": "Pre Launch Testing and Bug Fixing",
+        "description": "A proper pass through your app or site before real users see it, with issues actually fixed.",
+        "price": 200,
+        "currency": "GBP",
+        "deliveryDays": 4,
+        "link": "/offers/software-testing"
+      },
+      "detail": {
+        "headline": "Find the Problems Before Your Users Do",
+        "overview": "I test your app or website across devices and common user paths, log every issue found, and fix the ones agreed with you, so launch day is not the first time problems surface.",
+        "deliverables": [
+          "Full test pass across major devices and browsers",
+          "Written bug report with priority levels",
+          "Fixes for agreed issues",
+          "Retest after fixes"
+        ],
+        "addons": [
+          { "name": "Extra round of testing after changes", "price": 60 },
+          { "name": "Load testing for traffic spikes", "price": 90 }
+        ],
+        "prerequisites": [
+          "Access to the app or site, staging or live",
+          "Any known issues you already want checked"
+        ],
+        "process": [
+          { "step": 1, "title": "Test across devices and key user paths" },
+          { "step": 2, "title": "Log and prioritize issues" },
+          { "step": 3, "title": "Fix agreed issues" },
+          { "step": 4, "title": "Retest and confirm" }
+        ],
+        "totalInvestment": 200,
+        "deliveryTime": "4 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "databases",
+      "category": "Technology and Programming",
+      "subcategory": "Databases",
+      "card": {
+        "title": "Database Design and Migration",
+        "description": "A database structured properly for how your data actually grows, or moved safely from an old system.",
+        "price": 300,
+        "currency": "GBP",
+        "deliveryDays": 6,
+        "link": "/offers/databases"
+      },
+      "detail": {
+        "headline": "A Database Built for How Your Data Actually Grows",
+        "overview": "I design database structures that match your real data relationships, or migrate your existing data to a new system safely, with backups and checks at every step so nothing gets lost.",
+        "deliverables": [
+          "Designed or migrated database structure",
+          "Data migration with verification checks",
+          "Backup taken before any changes",
+          "Basic documentation of the structure"
+        ],
+        "addons": [
+          { "name": "Extra data source to migrate", "price": 70 },
+          { "name": "Performance tuning pass", "price": 80 }
+        ],
+        "prerequisites": [
+          "Access to current data or database",
+          "Description of how the data is used day to day"
+        ],
+        "process": [
+          { "step": 1, "title": "Review current data and structure" },
+          { "step": 2, "title": "Design the new structure or migration plan" },
+          { "step": 3, "title": "Migrate or build, with backups" },
+          { "step": 4, "title": "Verify and document" }
+        ],
+        "totalInvestment": 300,
+        "deliveryTime": "6 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    },
+    {
+      "id": "seo-aeo-geo-optimization",
+      "category": "Digital Marketing",
+      "subcategory": "SEO",
+      "card": {
+        "title": "AI Search and AEO Optimization Package",
+        "description": "Get your site structured so AI search engines like Perplexity, ChatGPT, and Claude can actually find and quote you.",
+        "price": 340,
+        "currency": "GBP",
+        "deliveryDays": 6,
+        "link": "/offers/seo-aeo-geo-optimization"
+      },
+      "detail": {
+        "headline": "Get Found by Search Engines and AI Engines, Not Just One",
+        "overview": "I restructure your key pages so they work for traditional search and for AI answer engines, with answer first content, schema markup, and FAQ sections built the way these systems actually extract information.",
+        "deliverables": [
+          "Restructured content on up to 5 key pages",
+          "Schema markup added, organization, FAQ, and service types",
+          "llms.txt file created for your site",
+          "Short report on what changed and why"
+        ],
+        "addons": [
+          { "name": "Extra page", "price": 50 },
+          { "name": "Quarterly content refresh package", "price": 120 }
+        ],
+        "prerequisites": [
+          "Access to your website content or CMS",
+          "List of the pages that matter most to you"
+        ],
+        "process": [
+          { "step": 1, "title": "Audit current pages against AEO and GEO standards" },
+          { "step": 2, "title": "Rewrite and restructure key sections" },
+          { "step": 3, "title": "Add schema and llms.txt" },
+          { "step": 4, "title": "Deliver report and handover" }
+        ],
+        "totalInvestment": 340,
+        "deliveryTime": "6 days",
+        "trustNote": "New agency on TechValley.uk. Early client pricing while we build our track record."
+      }
+    }
+  ]
+}

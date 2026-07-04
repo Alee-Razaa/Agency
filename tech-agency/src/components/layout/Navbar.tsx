@@ -94,37 +94,38 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-0 bg-[#030712] z-50 p-8 pt-24 space-y-8 animate-fadeIn">
+        <div className="lg:hidden fixed inset-0 top-0 bg-[#030712] z-50 px-6 sm:px-10 pt-20 pb-6 flex flex-col animate-fadeIn overflow-y-auto">
            <button
-             className="absolute top-6 right-6 text-white"
+             className="absolute top-6 right-6 sm:right-10 text-white p-2 -mr-2"
              onClick={() => setMobileMenuOpen(false)}
+             aria-label="Close menu"
            >
-             <X className="w-8 h-8" />
+             <X className="w-6 h-6" />
            </button>
-           <div className="flex flex-col gap-6">
+           <div className="flex flex-col gap-2 mt-2">
             {NAV_LINKS.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-3xl font-bold text-white"
+                  className="text-lg sm:text-xl font-medium text-slate-400 hover:text-white transition-colors py-1.5 font-mono tracking-tight"
                 >
                   {link.name}
                 </Link>
               ))}
-              <hr className="border-white/5 my-4" />
-              <div className="flex flex-col gap-4">
+              <hr className="border-white/5 my-3" />
+              <div className="flex flex-col gap-3">
                 <Link
                   href="/login"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-xl font-medium text-slate-400"
+                  className="text-base font-medium text-slate-400 hover:text-white transition-colors py-1 font-mono tracking-tight"
                 >
                   Log in
                 </Link>
                 <Link
                   href="/contact"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="bg-white text-black py-4 rounded-full text-center font-bold text-lg"
+                  className="bg-white text-black py-3 rounded-full text-center font-semibold text-sm hover:bg-slate-200 transition-colors mt-1"
                 >
                   Contact Sales
                 </Link>

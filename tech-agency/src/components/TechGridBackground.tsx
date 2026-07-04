@@ -16,14 +16,14 @@ export const TechGridBackground = () => {
 
           /* High-visibility multi-color grid lines rendering utilizing the core matching accents */
           background-image:
-            linear-gradient(to right, rgba(6, 182, 212, 0.5) 1px, transparent 1px),     /* Cyan */
-            linear-gradient(to bottom, rgba(236, 72, 153, 0.5) 1px, transparent 1px),   /* Deep Pink */
-            linear-gradient(to right, rgba(245, 158, 11, 0.4) 2px, transparent 2px),    /* Vivid Amber */
-            linear-gradient(to bottom, rgba(168, 85, 247, 0.4) 2px, transparent 2px),  /* Purple */
-            linear-gradient(to right, rgba(16, 185, 129, 0.3) 1px, transparent 1px),   /* Emerald Green */
-            linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px),   /* Royal Blue */
-            linear-gradient(to right, rgba(244, 63, 94, 0.25) 2px, transparent 2px),    /* Coral Red */
-            linear-gradient(to bottom, rgba(99, 102, 241, 0.25) 2px, transparent 2px);  /* Electric Indigo */
+            linear-gradient(to right, rgba(6, 182, 212, 0.05) 1px, transparent 1px),     /* Cyan */
+            linear-gradient(to bottom, rgba(236, 72, 153, 0.05) 1px, transparent 1px),   /* Deep Pink */
+            linear-gradient(to right, rgba(245, 158, 11, 0.04) 2px, transparent 2px),    /* Vivid Amber */
+            linear-gradient(to bottom, rgba(168, 85, 247, 0.04) 2px, transparent 2px),  /* Purple */
+            linear-gradient(to right, rgba(16, 185, 129, 0.04) 1px, transparent 1px),   /* Emerald Green */
+            linear-gradient(to bottom, rgba(59, 130, 246, 0.04) 1px, transparent 1px),   /* Royal Blue */
+            linear-gradient(to right, rgba(244, 63, 94, 0.03) 2px, transparent 2px),    /* Coral Red */
+            linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 2px, transparent 2px);  /* Electric Indigo */
 
           /* Multi-density geometric frequency patterns */
           background-size: 30px 30px, 30px 30px, 120px 120px, 120px 120px, 60px 60px, 60px 60px, 180px 180px, 180px 180px;

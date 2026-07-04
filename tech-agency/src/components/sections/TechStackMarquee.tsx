@@ -15,30 +15,32 @@ const TECH_ICONS = [
 
 export const TechStackMarquee = () => {
   return (
-    <div className="w-full border-y border-slate-200 py-8 bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.03)] overflow-hidden mb-12 relative z-10">
-      <div className="flex gap-24 w-max animate-tech-track px-4">
-        {[...TECH_ICONS, ...TECH_ICONS].map((icon, idx) => (
-          <div key={`${icon.name}-${idx}`} className="relative h-10 w-24">
-            <Image
-              src={icon.url}
-              alt={icon.name}
-              fill
-              className="object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
-              sizes="96px"
-            />
-          </div>
-        ))}
-      </div>
+    <section id="tech-stack" className="w-full px-4 sm:px-6 lg:px-16 mb-8 sm:mb-10 md:mb-12 relative z-10">
+      <div className="w-full border-y border-slate-200 py-5 sm:py-6 md:py-8 bg-white/95 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-[0_4px_25px_rgba(0,0,0,0.03)] overflow-hidden">
+        <div className="flex gap-12 sm:gap-16 md:gap-20 lg:gap-24 w-max animate-tech-track px-4">
+          {[...TECH_ICONS, ...TECH_ICONS].map((icon, idx) => (
+            <div key={`${icon.name}-${idx}`} className="relative h-7 w-16 sm:h-8 sm:w-20 md:h-10 md:w-24">
+              <Image
+                src={icon.url}
+                alt={icon.name}
+                fill
+                className="object-contain opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300 ease-in-out cursor-pointer"
+                sizes="96px"
+              />
+            </div>
+          ))}
+        </div>
 
-      <style jsx>{`
-        .animate-tech-track {
-          animation: techMarquee 25s linear infinite;
-        }
-        @keyframes techMarquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-    </div>
+        <style jsx>{`
+          .animate-tech-track {
+            animation: techMarquee 25s linear infinite;
+          }
+          @keyframes techMarquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}</style>
+      </div>
+    </section>
   );
 };
